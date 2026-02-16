@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "titulo": "Fé Reformada & Apologética",
+    "autor": "Rodrigo Niskier",
+    "versao": "1.0"
+  },
+  "categorias": [
+    {
+      "id": "cat_internas",
+      "titulo": "Dúvidas Internas (Bíblicas)",
+      "descricao": "Questões sobre inerrância, cânon e a coerência das Escrituras.",
+      "perguntas": [
+        {
+          "id": 101,
+          "pergunta": "A Bíblia contém erros ou contradições reais?",
+          "resposta": "Não. A Escritura é 'theopneustos' (inspirada por Deus) e, portanto, inerrante nos autógrafos originais. As aparentes discrepâncias são fruto de erros de copistas, variações de perspectiva dos autores humanos ou uso de linguagem fenomenológica (descrevendo as coisas como aparecem aos olhos, não cientificamente). A verdade teológica permanece intacta.",
+          "versiculos": [
+            {
+              "ref": "Salmo 19:7",
+              "texto": "A lei do Senhor é perfeita e restaura a alma; o testemunho do Senhor é fiel e dá sabedoria aos simples."
+            },
+            {
+              "ref": "2 Timóteo 3:16",
+              "texto": "Toda a Escritura é inspirada por Deus e útil para o ensino, para a repreensão, para a correção, para a educação na justiça."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat_opositores",
+      "titulo": "Dúvidas dos Opositores",
+      "descricao": "Respostas ao ateísmo, cientificismo e filosofia secular.",
+      "perguntas": [
+        {
+          "id": 201,
+          "pergunta": "Se Deus é bom, por que o mal existe?",
+          "resposta": "Deus não é o autor do pecado, mas em Sua soberania decretou permiti-lo para fins maiores de Sua glória e justiça. O mal moral é responsabilidade das criaturas livres (anjos e homens). Deus usa até o mal para promover o bem dos eleitos, como na cruz de Cristo — o maior crime da história que gerou a maior bênção.",
+          "versiculos": [
+            {
+              "ref": "Gênesis 50:20",
+              "texto": "Vós, na verdade, intentastes o mal contra mim; porém Deus o tornou em bem..."
+            },
+            {
+              "ref": "Romanos 8:28",
+              "texto": "Sabemos que todas as coisas cooperam para o bem daqueles que amam a Deus..."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
