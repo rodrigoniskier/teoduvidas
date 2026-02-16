@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apologética Reformada</title>
+    
+    <style>
+        :root {
+            --primary: #2c3e50; /* Azul escuro sóbrio (Teologia clássica) */
+            --accent: #8e44ad;  /* Roxo (Realeza/Liturgia) ou pode ser um #c0392b (Sangue/Reforma) */
+            --bg: #f4f4f9;
+            --text: #333;
+            --card-bg: #fff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        h1 { margin: 0; font-size: 1.5rem; font-weight: 600; }
+        .subtitle { font-size: 0.9rem; opacity: 0.8; margin-top: 5px; }
+
+        /* Search Bar */
+        .search-container {
+            margin-top: 15px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        input#searchBox {
+            width: 90%;
+            padding: 12px;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* Navigation / Breadcrumbs */
+        #nav-controls {
+            padding: 10px 20px;
+            display: none; /* Hidden on home */
+        }
+
+        .btn-back {
+            background: none;
+            border: none;
+            color: var(--primary);
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 1rem;
+        }
+        .btn-back:hover { text-decoration: underline; }
+
+        /* Main Content Areas */
+        main {
+            flex: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Category Grid (Home) */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .cat-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-left: 5px solid var(--accent);
+        }
+
+        .cat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .cat-title { font-size: 1.25rem; font-weight: bold; margin-bottom: 10px; color: var(--primary); }
+        .cat-desc { font-size: 0.9rem; color: #666; line-height: 1.5; }
+
+        /* Questions Grid (Flashcards) */
+        #questions-view { display: none; }
+        
+        .questions-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Flashcard Logic */
+        .flashcard {
+            background-color: transparent;
+            perspective: 1000px;
+            height: auto;
+            min-height: 150px;
+            cursor: pointer;
+        }
+
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: left;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateX(180deg);
+        }
+
+        .flashcard-front, .flashcard-back {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            background: #fff;
+            padding: 25px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .flashcard-front {
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .q-text { font-size: 1.1rem; font-weight: 600; color: var(--primary); }
+        .click-hint { font-size: 0.75rem; color: #999; margin-top: 15px; text-transform: uppercase; letter-spacing: 1px; }
+
+        .flashcard-back {
+            background-color: #fafafa;
+            transform: rotateX(180deg);
+            border-top: 4px solid var(--accent);
+        }
+
+        .a-text { font-size: 1rem; line-height: 1.6; color: #444; margin-bottom: 15px; }
+
+        .verse-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            margin-right: 5px;
+            margin-top: 5px;
+        }
+        .verse-btn:hover { background-color: var(--accent); }
+
+        /* Verse Modal/Popup */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            border-left: 5px solid var(--accent);
+        }
+
+        .modal-ref { font-weight: bold; color: var(--primary); font-size: 1.2rem; margin-bottom: 10px; display: block;}
+        .modal-text { font-style: italic; color: #555; line-height: 1.6; font-family: 'Georgia', serif; }
+        .close-modal {
+            position: absolute; top: 10px; right: 15px;
+            font-size: 1.5rem; cursor: pointer; color: #999;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8rem;
+            color: #777;
+            margin-top: auto;
+            border-top: 1px solid #ddd;
+        }
+
+        /* Responsividade básica */
+        @media (min-width: 768px) {
+            .questions-grid { display: grid; grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Apologética Reformada</h1>
+        <div class="subtitle">Respostas Bíblicas para Dúvidas Sinceras</div>
+        <div class="search-container">
+            <input type="text" id="searchBox" placeholder="Pesquisar por tema, dúvida ou teologia...">
+        </div>
+    </header>
+
+    <div id="nav-controls">
+        <button class="btn-back" onclick="goHome()">
+            <span>&#8592;</span> Voltar para Categorias
+        </button>
+    </div>
+
+    <main>
+        <div id="categories-view" class="category-grid">
+            <div class="cat-card">Carregando conteúdo...</div>
+        </div>
+
+        <div id="questions-view">
+            <h2 id="current-category-title" style="margin-bottom: 20px; color: var(--primary);">Título da Categoria</h2>
+            <div class="questions-grid" id="cards-container">
+                </div>
+        </div>
+    </main>
+
+    <div id="verse-modal" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-content">
+            <span class="close-modal" onclick="document.getElementById('verse-modal').style.display='none'">&times;</span>
+            <span class="modal-ref" id="modal-ref-display">João 3:16</span>
+            <p class="modal-text" id="modal-text-display">Porque Deus amou o mundo...</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Soli Deo Gloria</p>
+        <p>Desenvolvido por <strong>Rodrigo Niskier</strong></p>
+    </footer>
+
+    <script>
+        let allData = null;
+        let currentQuestions = [];
+
+        // 1. Carregar Dados
+        async function loadData() {
+            try {
+                const response = await fetch('conteudo.json');
+                if (!response.ok) throw new Error("Erro ao carregar JSON");
+                allData = await response.json();
+                renderCategories(allData.categorias);
+            } catch (error) {
+                console.error(error);
+                document.getElementById('categories-view').innerHTML = 
+                    `<p style="color:red; text-align:center;">Erro ao carregar dados. Se estiver rodando localmente, use um servidor local (Live Server).</p>`;
+            }
+        }
+
+        // 2. Renderizar Categorias (Home)
+        function renderCategories(categories) {
+            const container = document.getElementById('categories-view');
+            container.innerHTML = '';
+            
+            categories.forEach(cat => {
+                const card = document.createElement('div');
+                card.className = 'cat-card';
+                card.onclick = () => openCategory(cat.id);
+                card.innerHTML = `
+                    <div class="cat-title">${cat.titulo}</div>
+                    <div class="cat-desc">${cat.descricao}</div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // 3. Abrir Categoria
+        function openCategory(catId) {
+            const category = allData.categorias.find(c => c.id === catId);
+            if (!category) return;
+
+            document.getElementById('categories-view').style.display = 'none';
+            document.getElementById('nav-controls').style.display = 'block';
+            document.getElementById('questions-view').style.display = 'block';
+            document.getElementById('current-category-title').innerText = category.titulo;
+
+            renderQuestions(category.perguntas);
+        }
+
+        // 4. Renderizar Cartões de Pergunta
+        function renderQuestions(questions) {
+            const container = document.getElementById('cards-container');
+            container.innerHTML = '';
+
+            if(questions.length === 0) {
+                container.innerHTML = '<p>Nenhuma pergunta encontrada.</p>';
+                return;
+            }
+
+            questions.forEach(q => {
+                const el = document.createElement('div');
+                el.className = 'flashcard';
+                // Toggle flip on click
+                el.onclick = (e) => {
+                    // Evita flip se clicou no botão do versículo
+                    if(e.target.classList.contains('verse-btn')) return;
+                    el.classList.toggle('flipped');
+                };
+
+                // Preparar botões de versículos
+                let verseButtons = '';
+                if(q.versiculos && q.versiculos.length > 0) {
+                    q.versiculos.forEach(v => {
+                        // Escapar aspas simples para o onclick
+                        const safeText = v.texto.replace(/'/g, "\\'");
+                        const safeRef = v.ref.replace(/'/g, "\\'");
+                        verseButtons += `<button class="verse-btn" onclick="openVerse('${safeRef}', '${safeText}')">${v.ref}</button>`;
+                    });
+                }
+
+                el.innerHTML = `
+                    <div class="flashcard-inner">
+                        <div class="flashcard-front">
+                            <div class="q-text">${q.pergunta}</div>
+                            <div class="click-hint">Clique para ver a resposta</div>
+                        </div>
+                        <div class="flashcard-back">
+                            <div class="a-text">${q.resposta}</div>
+                            <div class="verse-area">
+                                <small style="display:block; margin-bottom:5px; color:#888;">Textos-Prova:</small>
+                                ${verseButtons}
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(el);
+            });
+        }
+
+        // 5. Voltar para Home
+        function goHome() {
+            document.getElementById('questions-view').style.display = 'none';
+            document.getElementById('nav-controls').style.display = 'none';
+            document.getElementById('categories-view').style.display = 'grid';
+            document.getElementById('searchBox').value = ''; // Limpar busca
+            renderCategories(allData.categorias); // Restaurar lista original
+        }
+
+        // 6. Modal de Versículo
+        function openVerse(ref, text) {
+            document.getElementById('modal-ref-display').innerText = ref;
+            document.getElementById('modal-text-display').innerText = text;
+            document.getElementById('verse-modal').style.display = 'flex';
+        }
+
+        function closeModal(e) {
+            if (e.target.id === 'verse-modal') {
+                document.getElementById('verse-modal').style.display = 'none';
+            }
+        }
+
+        // 7. Sistema de Busca
+        document.getElementById('searchBox').addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            
+            if (term.length < 2) {
+                if(document.getElementById('questions-view').style.display === 'none') {
+                    renderCategories(allData.categorias); // Se na home, reseta categorias
+                }
+                return;
+            }
+
+            // Modo Busca Global: esconde categorias, mostra perguntas filtradas de TODAS as categorias
+            document.getElementById('categories-view').style.display = 'none';
+            document.getElementById('nav-controls').style.display = 'block';
+            document.getElementById('questions-view').style.display = 'block';
+            document.getElementById('current-category-title').innerText = `Resultados para "${term}"`;
+
+            // Flatmap de todas as perguntas
+            let allQuestions = [];
+            allData.categorias.forEach(c => {
+                allQuestions = allQuestions.concat(c.perguntas);
+            });
+
+            const filtered = allQuestions.filter(q => 
+                q.pergunta.toLowerCase().includes(term) || 
+                q.resposta.toLowerCase().includes(term)
+            );
+
+            renderQuestions(filtered);
+        });
+
+        // Inicializar
+        loadData();
+    </script>
+</body>
+</html>
