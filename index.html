@@ -3,430 +3,917 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apologética Reformada - Respostas Bíblicas para Dúvidas Sinceras">
     <title>Apologética Reformada</title>
     
     <style>
+        /* ==========================================
+           DESIGN SYSTEM - CSS Custom Properties
+           ========================================== */
         :root {
-            --primary: #2c3e50; /* Azul escuro sóbrio (Teologia clássica) */
-            --accent: #8e44ad;  /* Roxo (Realeza/Liturgia) ou pode ser um #c0392b (Sangue/Reforma) */
-            --bg: #f4f4f9;
-            --text: #333;
-            --card-bg: #fff;
+            /* Colors */
+            --color-primary: #2c3e50;
+            --color-primary-dark: #1a252f;
+            --color-accent: #8e44ad;
+            --color-accent-hover: #9b59b6;
+            --color-bg: #f4f4f9;
+            --color-text: #333;
+            --color-text-light: #666;
+            --color-text-lighter: #888;
+            --color-text-lightest: #999;
+            --color-card-bg: #fff;
+            --color-card-back: #fafafa;
+            --color-border: #ddd;
+            --color-error: #e74c3c;
+            --color-overlay: rgba(0, 0, 0, 0.5);
+            
+            /* Spacing */
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-2xl: 2.5rem;
+            
+            /* Typography */
+            --font-family-base: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+            --font-family-serif: 'Georgia', 'Times New Roman', serif;
+            --font-size-xs: 0.75rem;
+            --font-size-sm: 0.875rem;
+            --font-size-base: 1rem;
+            --font-size-lg: 1.1rem;
+            --font-size-xl: 1.25rem;
+            --font-size-2xl: 1.5rem;
+            --line-height-tight: 1.5;
+            --line-height-relaxed: 1.6;
+            
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 10px;
+            --radius-xl: 12px;
+            --radius-full: 25px;
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 8px 15px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 10px 25px rgba(0, 0, 0, 0.2);
+            
+            /* Transitions */
+            --transition-fast: 150ms ease-in-out;
+            --transition-base: 200ms ease-in-out;
+            --transition-slow: 300ms ease-in-out;
+            --transition-flip: 600ms cubic-bezier(0.4, 0, 0.2, 1);
+            
+            /* Z-index */
+            --z-sticky: 100;
+            --z-modal: 1000;
+            
+            /* Max widths */
+            --max-width-content: 1200px;
+            --max-width-search: 600px;
+            --max-width-modal: 500px;
+        }
+
+        /* ==========================================
+           RESET & BASE STYLES
+           ========================================== */
+        *, *::before, *::after {
+            box-sizing: border-box;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
+            font-family: var(--font-family-base);
+            background-color: var(--color-bg);
+            color: var(--color-text);
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            line-height: var(--line-height-tight);
         }
 
-        /* Header */
-        header {
-            background-color: var(--primary);
+        /* ==========================================
+           HEADER
+           ========================================== */
+        .header {
+            background-color: var(--color-primary);
             color: white;
-            padding: 1.5rem;
+            padding: var(--space-lg);
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            box-shadow: var(--shadow-sm);
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: var(--z-sticky);
         }
 
-        h1 { margin: 0; font-size: 1.5rem; font-weight: 600; }
-        .subtitle { font-size: 0.9rem; opacity: 0.8; margin-top: 5px; }
+        .header__title {
+            margin: 0;
+            font-size: var(--font-size-2xl);
+            font-weight: 600;
+        }
 
-        /* Search Bar */
-        .search-container {
-            margin-top: 15px;
-            max-width: 600px;
+        .header__subtitle {
+            font-size: var(--font-size-sm);
+            opacity: 0.8;
+            margin-top: var(--space-xs);
+        }
+
+        .search {
+            margin-top: var(--space-lg);
+            max-width: var(--max-width-search);
             margin-left: auto;
             margin-right: auto;
         }
 
-        input#searchBox {
-            width: 90%;
-            padding: 12px;
-            border-radius: 25px;
+        .search__input {
+            width: 100%;
+            padding: var(--space-md);
+            border-radius: var(--radius-full);
             border: none;
             outline: none;
-            font-size: 1rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            font-size: var(--font-size-base);
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow var(--transition-base);
         }
 
-        /* Navigation / Breadcrumbs */
-        #nav-controls {
-            padding: 10px 20px;
-            display: none; /* Hidden on home */
+        .search__input:focus {
+            box-shadow: var(--shadow-md);
         }
 
-        .btn-back {
+        /* ==========================================
+           NAVIGATION
+           ========================================== */
+        .nav {
+            padding: var(--space-md) var(--space-xl);
+            display: none;
+        }
+
+        .nav--visible {
+            display: block;
+        }
+
+        .nav__back-btn {
             background: none;
             border: none;
-            color: var(--primary);
+            color: var(--color-primary);
             cursor: pointer;
             font-weight: bold;
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            gap: 5px;
-            font-size: 1rem;
+            gap: var(--space-sm);
+            font-size: var(--font-size-base);
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-sm);
+            transition: background-color var(--transition-base);
         }
-        .btn-back:hover { text-decoration: underline; }
 
-        /* Main Content Areas */
-        main {
+        .nav__back-btn:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .nav__back-btn:focus {
+            outline: 2px solid var(--color-accent);
+            outline-offset: 2px;
+        }
+
+        /* ==========================================
+           MAIN CONTENT
+           ========================================== */
+        .main {
             flex: 1;
-            padding: 20px;
-            max-width: 1200px;
+            padding: var(--space-xl);
+            max-width: var(--max-width-content);
             margin: 0 auto;
             width: 100%;
-            box-sizing: border-box;
         }
 
-        /* Category Grid (Home) */
-        .category-grid {
+        /* ==========================================
+           CATEGORIES GRID
+           ========================================== */
+        .categories {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            padding: 20px 0;
+            gap: var(--space-xl);
+            padding: var(--space-xl) 0;
         }
 
-        .cat-card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        .categories--hidden {
+            display: none;
+        }
+
+        .category-card {
+            background: var(--color-card-bg);
+            padding: var(--space-2xl);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-sm);
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-            border-left: 5px solid var(--accent);
+            transition: transform var(--transition-base), box-shadow var(--transition-base);
+            border-left: 5px solid var(--color-accent);
         }
 
-        .cat-card:hover {
+        .category-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow-lg);
         }
 
-        .cat-title { font-size: 1.25rem; font-weight: bold; margin-bottom: 10px; color: var(--primary); }
-        .cat-desc { font-size: 0.9rem; color: #666; line-height: 1.5; }
+        .category-card:focus {
+            outline: 3px solid var(--color-accent);
+            outline-offset: 2px;
+        }
 
-        /* Questions Grid (Flashcards) */
-        #questions-view { display: none; }
-        
+        .category-card__title {
+            font-size: var(--font-size-xl);
+            font-weight: bold;
+            margin-bottom: var(--space-md);
+            color: var(--color-primary);
+        }
+
+        .category-card__desc {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-light);
+            line-height: var(--line-height-tight);
+        }
+
+        /* ==========================================
+           QUESTIONS VIEW
+           ========================================== */
+        .questions-view {
+            display: none;
+        }
+
+        .questions-view--visible {
+            display: block;
+        }
+
+        .questions-view__title {
+            margin-bottom: var(--space-xl);
+            color: var(--color-primary);
+            font-size: var(--font-size-2xl);
+        }
+
         .questions-grid {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: var(--space-xl);
         }
 
-        /* Flashcard Logic */
+        .questions-grid--empty {
+            text-align: center;
+            padding: var(--space-2xl);
+            color: var(--color-text-light);
+        }
+
+        /* ==========================================
+           FLASHCARDS
+           ========================================== */
         .flashcard {
-            background-color: transparent;
             perspective: 1000px;
-            height: auto;
             min-height: 150px;
             cursor: pointer;
         }
 
-        .flashcard-inner {
+        .flashcard__inner {
             position: relative;
             width: 100%;
             height: 100%;
             text-align: left;
-            transition: transform 0.6s;
+            transition: transform var(--transition-flip);
             transform-style: preserve-3d;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-radius: 10px;
+            box-shadow: var(--shadow-md);
+            border-radius: var(--radius-lg);
         }
 
-        .flashcard.flipped .flashcard-inner {
+        .flashcard--flipped .flashcard__inner {
             transform: rotateX(180deg);
         }
 
-        .flashcard-front, .flashcard-back {
+        .flashcard__face {
             position: relative;
             width: 100%;
             height: 100%;
             backface-visibility: hidden;
-            border-radius: 10px;
-            background: #fff;
-            padding: 25px;
-            box-sizing: border-box;
+            border-radius: var(--radius-lg);
+            background: var(--color-card-bg);
+            padding: var(--space-xl);
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
 
-        .flashcard-front {
-            border-bottom: 4px solid var(--primary);
+        .flashcard__front {
+            border-bottom: 4px solid var(--color-primary);
         }
 
-        .q-text { font-size: 1.1rem; font-weight: 600; color: var(--primary); }
-        .click-hint { font-size: 0.75rem; color: #999; margin-top: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .flashcard__question {
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: var(--space-lg);
+        }
 
-        .flashcard-back {
-            background-color: #fafafa;
+        .flashcard__hint {
+            font-size: var(--font-size-xs);
+            color: var(--color-text-lightest);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .flashcard__back {
+            background-color: var(--color-card-back);
             transform: rotateX(180deg);
-            border-top: 4px solid var(--accent);
+            border-top: 4px solid var(--color-accent);
         }
 
-        .a-text { font-size: 1rem; line-height: 1.6; color: #444; margin-bottom: 15px; }
+        .flashcard__answer {
+            font-size: var(--font-size-base);
+            line-height: var(--line-height-relaxed);
+            color: #444;
+            margin-bottom: var(--space-lg);
+        }
+
+        .verse-section {
+            margin-top: auto;
+        }
+
+        .verse-section__label {
+            display: block;
+            margin-bottom: var(--space-sm);
+            color: var(--color-text-lighter);
+            font-size: var(--font-size-xs);
+        }
 
         .verse-btn {
-            background-color: var(--primary);
+            background-color: var(--color-primary);
             color: white;
             border: none;
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 0.8rem;
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-sm);
+            font-size: var(--font-size-xs);
             cursor: pointer;
-            margin-right: 5px;
-            margin-top: 5px;
+            margin-right: var(--space-sm);
+            margin-top: var(--space-sm);
+            transition: background-color var(--transition-base), transform var(--transition-fast);
         }
-        .verse-btn:hover { background-color: var(--accent); }
 
-        /* Verse Modal/Popup */
-        .modal-overlay {
+        .verse-btn:hover {
+            background-color: var(--color-accent);
+            transform: translateY(-1px);
+        }
+
+        .verse-btn:focus {
+            outline: 2px solid var(--color-accent-hover);
+            outline-offset: 2px;
+        }
+
+        .verse-btn:active {
+            transform: translateY(0);
+        }
+
+        /* ==========================================
+           MODAL
+           ========================================== */
+        .modal {
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.5);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--color-overlay);
             display: none;
             justify-content: center;
             align-items: center;
-            z-index: 1000;
+            z-index: var(--z-modal);
+            padding: var(--space-xl);
         }
 
-        .modal-content {
+        .modal--visible {
+            display: flex;
+        }
+
+        .modal__content {
             background: white;
-            padding: 25px;
-            border-radius: 8px;
-            max-width: 500px;
-            width: 90%;
+            padding: var(--space-2xl);
+            border-radius: var(--radius-md);
+            max-width: var(--max-width-modal);
+            width: 100%;
             position: relative;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            border-left: 5px solid var(--accent);
+            box-shadow: var(--shadow-xl);
+            border-left: 5px solid var(--color-accent);
+            animation: modalSlideIn 0.3s ease-out;
         }
 
-        .modal-ref { font-weight: bold; color: var(--primary); font-size: 1.2rem; margin-bottom: 10px; display: block;}
-        .modal-text { font-style: italic; color: #555; line-height: 1.6; font-family: 'Georgia', serif; }
-        .close-modal {
-            position: absolute; top: 10px; right: 15px;
-            font-size: 1.5rem; cursor: pointer; color: #999;
+        @keyframes modalSlideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
 
-        /* Footer */
-        footer {
+        .modal__close {
+            position: absolute;
+            top: var(--space-md);
+            right: var(--space-lg);
+            font-size: var(--font-size-2xl);
+            cursor: pointer;
+            color: var(--color-text-lightest);
+            background: none;
+            border: none;
+            padding: var(--space-sm);
+            line-height: 1;
+            transition: color var(--transition-base);
+        }
+
+        .modal__close:hover {
+            color: var(--color-text);
+        }
+
+        .modal__close:focus {
+            outline: 2px solid var(--color-accent);
+            outline-offset: 2px;
+        }
+
+        .modal__ref {
+            font-weight: bold;
+            color: var(--color-primary);
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--space-md);
+            display: block;
+        }
+
+        .modal__text {
+            font-style: italic;
+            color: #555;
+            line-height: var(--line-height-relaxed);
+            font-family: var(--font-family-serif);
+        }
+
+        /* ==========================================
+           FOOTER
+           ========================================== */
+        .footer {
             text-align: center;
-            padding: 20px;
-            font-size: 0.8rem;
+            padding: var(--space-xl);
+            font-size: var(--font-size-xs);
             color: #777;
             margin-top: auto;
-            border-top: 1px solid #ddd;
+            border-top: 1px solid var(--color-border);
         }
 
-        /* Responsividade básica */
+        .footer__text {
+            margin: var(--space-sm) 0;
+        }
+
+        /* ==========================================
+           LOADING & ERROR STATES
+           ========================================== */
+        .loading {
+            text-align: center;
+            padding: var(--space-2xl);
+            color: var(--color-text-light);
+        }
+
+        .error {
+            color: var(--color-error);
+            text-align: center;
+            padding: var(--space-2xl);
+            background: rgba(231, 76, 60, 0.1);
+            border-radius: var(--radius-md);
+            margin: var(--space-xl) 0;
+        }
+
+        /* ==========================================
+           RESPONSIVE DESIGN
+           ========================================== */
         @media (min-width: 768px) {
-            .questions-grid { display: grid; grid-template-columns: 1fr 1fr; }
+            .questions-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 767px) {
+            .main {
+                padding: var(--space-md);
+            }
+
+            .header {
+                padding: var(--space-md);
+            }
+
+            .header__title {
+                font-size: var(--font-size-xl);
+            }
+
+            .category-card {
+                padding: var(--space-lg);
+            }
+        }
+
+        /* ==========================================
+           ACCESSIBILITY & REDUCED MOTION
+           ========================================== */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Focus visible for keyboard navigation */
+        :focus-visible {
+            outline: 3px solid var(--color-accent);
+            outline-offset: 2px;
+        }
+
+        /* Screen reader only content */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Apologética Reformada</h1>
-        <div class="subtitle">Respostas Bíblicas para Dúvidas Sinceras</div>
-        <div class="search-container">
-            <input type="text" id="searchBox" placeholder="Pesquisar por tema, dúvida ou teologia...">
+    <header class="header">
+        <h1 class="header__title">Apologética Reformada</h1>
+        <p class="header__subtitle">Respostas Bíblicas para Dúvidas Sinceras</p>
+        <div class="search">
+            <label for="searchBox" class="sr-only">Pesquisar por tema, dúvida ou teologia</label>
+            <input 
+                type="search" 
+                id="searchBox" 
+                class="search__input"
+                placeholder="Pesquisar por tema, dúvida ou teologia..."
+                aria-label="Campo de busca"
+                autocomplete="off"
+            >
         </div>
     </header>
 
-    <div id="nav-controls">
-        <button class="btn-back" onclick="goHome()">
-            <span>&#8592;</span> Voltar para Categorias
+    <nav id="nav" class="nav" aria-label="Navegação principal">
+        <button 
+            class="nav__back-btn" 
+            id="backBtn"
+            aria-label="Voltar para categorias"
+        >
+            <span aria-hidden="true">←</span>
+            <span>Voltar para Categorias</span>
         </button>
-    </div>
+    </nav>
 
-    <main>
-        <div id="categories-view" class="category-grid">
-            <div class="cat-card">Carregando conteúdo...</div>
-        </div>
+    <main class="main">
+        <section id="categoriesView" class="categories" aria-label="Categorias de apologética">
+            <div class="loading">Carregando conteúdo...</div>
+        </section>
 
-        <div id="questions-view">
-            <h2 id="current-category-title" style="margin-bottom: 20px; color: var(--primary);">Título da Categoria</h2>
-            <div class="questions-grid" id="cards-container">
-                </div>
-        </div>
+        <section id="questionsView" class="questions-view" aria-label="Perguntas e respostas">
+            <h2 id="categoryTitle" class="questions-view__title">Título da Categoria</h2>
+            <div id="cardsContainer" class="questions-grid"></div>
+        </section>
     </main>
 
-    <div id="verse-modal" class="modal-overlay" onclick="closeModal(event)">
-        <div class="modal-content">
-            <span class="close-modal" onclick="document.getElementById('verse-modal').style.display='none'">&times;</span>
-            <span class="modal-ref" id="modal-ref-display">João 3:16</span>
-            <p class="modal-text" id="modal-text-display">Porque Deus amou o mundo...</p>
+    <div id="verseModal" class="modal" role="dialog" aria-labelledby="modalRef" aria-modal="true">
+        <div class="modal__content">
+            <button 
+                class="modal__close" 
+                id="closeModal"
+                aria-label="Fechar modal"
+            >
+                ×
+            </button>
+            <span id="modalRef" class="modal__ref">João 3:16</span>
+            <p id="modalText" class="modal__text">Porque Deus amou o mundo...</p>
         </div>
     </div>
 
-    <footer>
-        <p>Soli Deo Gloria</p>
-        <p>Desenvolvido por <strong>Rodrigo Niskier</strong></p>
+    <footer class="footer">
+        <p class="footer__text">Soli Deo Gloria</p>
+        <p class="footer__text">Desenvolvido por <strong>Rodrigo Niskier</strong></p>
     </footer>
 
-    <script>
-        let allData = null;
-        let currentQuestions = [];
+    <script type="module">
+        // ==========================================
+        // APP STATE MANAGEMENT
+        // ==========================================
+        const AppState = {
+            data: null,
+            currentView: 'categories',
+            searchTerm: '',
+            
+            setData(data) {
+                this.data = data;
+            },
+            
+            setView(view) {
+                this.currentView = view;
+                this.updateUI();
+            },
+            
+            setSearchTerm(term) {
+                this.searchTerm = term;
+            },
+            
+            updateUI() {
+                const categoriesView = document.getElementById('categoriesView');
+                const questionsView = document.getElementById('questionsView');
+                const nav = document.getElementById('nav');
+                
+                if (this.currentView === 'categories') {
+                    categoriesView.classList.remove('categories--hidden');
+                    questionsView.classList.remove('questions-view--visible');
+                    nav.classList.remove('nav--visible');
+                } else {
+                    categoriesView.classList.add('categories--hidden');
+                    questionsView.classList.add('questions-view--visible');
+                    nav.classList.add('nav--visible');
+                }
+            }
+        };
 
-        // 1. Carregar Dados
+        // ==========================================
+        // DOM ELEMENTS
+        // ==========================================
+        const elements = {
+            searchBox: document.getElementById('searchBox'),
+            backBtn: document.getElementById('backBtn'),
+            categoriesView: document.getElementById('categoriesView'),
+            questionsView: document.getElementById('questionsView'),
+            categoryTitle: document.getElementById('categoryTitle'),
+            cardsContainer: document.getElementById('cardsContainer'),
+            verseModal: document.getElementById('verseModal'),
+            modalRef: document.getElementById('modalRef'),
+            modalText: document.getElementById('modalText'),
+            closeModal: document.getElementById('closeModal')
+        };
+
+        // ==========================================
+        // DATA LOADING
+        // ==========================================
         async function loadData() {
             try {
                 const response = await fetch('conteudo.json');
-                if (!response.ok) throw new Error("Erro ao carregar JSON");
-                allData = await response.json();
-                renderCategories(allData.categorias);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                AppState.setData(data);
+                renderCategories(data.categorias);
             } catch (error) {
-                console.error(error);
-                document.getElementById('categories-view').innerHTML = 
-                    `<p style="color:red; text-align:center;">Erro ao carregar dados. Se estiver rodando localmente, use um servidor local (Live Server).</p>`;
+                console.error('Erro ao carregar dados:', error);
+                elements.categoriesView.innerHTML = `
+                    <div class="error" role="alert">
+                        <p><strong>Erro ao carregar dados.</strong></p>
+                        <p>Se estiver rodando localmente, use um servidor local (Live Server).</p>
+                    </div>
+                `;
             }
         }
 
-        // 2. Renderizar Categorias (Home)
+        // ==========================================
+        // RENDERING FUNCTIONS
+        // ==========================================
         function renderCategories(categories) {
-            const container = document.getElementById('categories-view');
-            container.innerHTML = '';
+            if (!categories || categories.length === 0) {
+                elements.categoriesView.innerHTML = '<p class="loading">Nenhuma categoria encontrada.</p>';
+                return;
+            }
+
+            const fragment = document.createDocumentFragment();
             
-            categories.forEach(cat => {
-                const card = document.createElement('div');
-                card.className = 'cat-card';
-                card.onclick = () => openCategory(cat.id);
-                card.innerHTML = `
-                    <div class="cat-title">${cat.titulo}</div>
-                    <div class="cat-desc">${cat.descricao}</div>
-                `;
-                container.appendChild(card);
+            categories.forEach(category => {
+                const card = createCategoryCard(category);
+                fragment.appendChild(card);
             });
+            
+            elements.categoriesView.innerHTML = '';
+            elements.categoriesView.appendChild(fragment);
         }
 
-        // 3. Abrir Categoria
-        function openCategory(catId) {
-            const category = allData.categorias.find(c => c.id === catId);
+        function createCategoryCard(category) {
+            const card = document.createElement('article');
+            card.className = 'category-card';
+            card.setAttribute('role', 'button');
+            card.setAttribute('tabindex', '0');
+            card.setAttribute('aria-label', `Abrir categoria: ${category.titulo}`);
+            
+            card.innerHTML = `
+                <h3 class="category-card__title">${escapeHtml(category.titulo)}</h3>
+                <p class="category-card__desc">${escapeHtml(category.descricao)}</p>
+            `;
+            
+            const openCategory = () => handleCategoryClick(category.id);
+            card.addEventListener('click', openCategory);
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openCategory();
+                }
+            });
+            
+            return card;
+        }
+
+        function renderQuestions(questions) {
+            if (!questions || questions.length === 0) {
+                elements.cardsContainer.innerHTML = '<p class="questions-grid--empty">Nenhuma pergunta encontrada.</p>';
+                return;
+            }
+
+            const fragment = document.createDocumentFragment();
+            
+            questions.forEach((question, index) => {
+                const card = createFlashcard(question, index);
+                fragment.appendChild(card);
+            });
+            
+            elements.cardsContainer.innerHTML = '';
+            elements.cardsContainer.appendChild(fragment);
+        }
+
+        function createFlashcard(question, index) {
+            const card = document.createElement('article');
+            card.className = 'flashcard';
+            card.setAttribute('role', 'button');
+            card.setAttribute('tabindex', '0');
+            card.setAttribute('aria-label', `Pergunta ${index + 1}: ${question.pergunta}`);
+            
+            const verseButtons = question.versiculos?.map(v => 
+                `<button 
+                    class="verse-btn" 
+                    data-ref="${escapeHtml(v.ref)}" 
+                    data-text="${escapeHtml(v.texto)}"
+                    aria-label="Ver versículo ${v.ref}"
+                >
+                    ${escapeHtml(v.ref)}
+                </button>`
+            ).join('') || '';
+            
+            card.innerHTML = `
+                <div class="flashcard__inner">
+                    <div class="flashcard__face flashcard__front">
+                        <div class="flashcard__question">${escapeHtml(question.pergunta)}</div>
+                        <div class="flashcard__hint" aria-live="polite">Clique para ver a resposta</div>
+                    </div>
+                    <div class="flashcard__face flashcard__back">
+                        <div class="flashcard__answer">${escapeHtml(question.resposta)}</div>
+                        ${verseButtons ? `
+                            <div class="verse-section">
+                                <small class="verse-section__label">Textos-Prova:</small>
+                                <div>${verseButtons}</div>
+                            </div>
+                        ` : ''}
+                    </div>
+                </div>
+            `;
+            
+            const toggleFlip = (e) => {
+                if (e.target.classList.contains('verse-btn')) return;
+                card.classList.toggle('flashcard--flipped');
+                const isFlipped = card.classList.contains('flashcard--flipped');
+                card.setAttribute('aria-label', `Pergunta ${index + 1}: ${isFlipped ? question.resposta : question.pergunta}`);
+            };
+            
+            card.addEventListener('click', toggleFlip);
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleFlip(e);
+                }
+            });
+            
+            return card;
+        }
+
+        // ==========================================
+        // EVENT HANDLERS
+        // ==========================================
+        function handleCategoryClick(categoryId) {
+            const category = AppState.data.categorias.find(c => c.id === categoryId);
             if (!category) return;
 
-            document.getElementById('categories-view').style.display = 'none';
-            document.getElementById('nav-controls').style.display = 'block';
-            document.getElementById('questions-view').style.display = 'block';
-            document.getElementById('current-category-title').innerText = category.titulo;
-
+            AppState.setView('questions');
+            elements.categoryTitle.textContent = category.titulo;
             renderQuestions(category.perguntas);
         }
 
-        // 4. Renderizar Cartões de Pergunta
-        function renderQuestions(questions) {
-            const container = document.getElementById('cards-container');
-            container.innerHTML = '';
-
-            if(questions.length === 0) {
-                container.innerHTML = '<p>Nenhuma pergunta encontrada.</p>';
-                return;
-            }
-
-            questions.forEach(q => {
-                const el = document.createElement('div');
-                el.className = 'flashcard';
-                // Toggle flip on click
-                el.onclick = (e) => {
-                    // Evita flip se clicou no botão do versículo
-                    if(e.target.classList.contains('verse-btn')) return;
-                    el.classList.toggle('flipped');
-                };
-
-                // Preparar botões de versículos
-                let verseButtons = '';
-                if(q.versiculos && q.versiculos.length > 0) {
-                    q.versiculos.forEach(v => {
-                        // Escapar aspas simples para o onclick
-                        const safeText = v.texto.replace(/'/g, "\\'");
-                        const safeRef = v.ref.replace(/'/g, "\\'");
-                        verseButtons += `<button class="verse-btn" onclick="openVerse('${safeRef}', '${safeText}')">${v.ref}</button>`;
-                    });
-                }
-
-                el.innerHTML = `
-                    <div class="flashcard-inner">
-                        <div class="flashcard-front">
-                            <div class="q-text">${q.pergunta}</div>
-                            <div class="click-hint">Clique para ver a resposta</div>
-                        </div>
-                        <div class="flashcard-back">
-                            <div class="a-text">${q.resposta}</div>
-                            <div class="verse-area">
-                                <small style="display:block; margin-bottom:5px; color:#888;">Textos-Prova:</small>
-                                ${verseButtons}
-                            </div>
-                        </div>
-                    </div>
-                `;
-                container.appendChild(el);
-            });
+        function handleBackClick() {
+            AppState.setView('categories');
+            elements.searchBox.value = '';
+            AppState.setSearchTerm('');
+            renderCategories(AppState.data.categorias);
         }
 
-        // 5. Voltar para Home
-        function goHome() {
-            document.getElementById('questions-view').style.display = 'none';
-            document.getElementById('nav-controls').style.display = 'none';
-            document.getElementById('categories-view').style.display = 'grid';
-            document.getElementById('searchBox').value = ''; // Limpar busca
-            renderCategories(allData.categorias); // Restaurar lista original
-        }
-
-        // 6. Modal de Versículo
-        function openVerse(ref, text) {
-            document.getElementById('modal-ref-display').innerText = ref;
-            document.getElementById('modal-text-display').innerText = text;
-            document.getElementById('verse-modal').style.display = 'flex';
-        }
-
-        function closeModal(e) {
-            if (e.target.id === 'verse-modal') {
-                document.getElementById('verse-modal').style.display = 'none';
-            }
-        }
-
-        // 7. Sistema de Busca
-        document.getElementById('searchBox').addEventListener('input', (e) => {
-            const term = e.target.value.toLowerCase();
+        function handleSearch(searchTerm) {
+            const term = searchTerm.toLowerCase().trim();
+            AppState.setSearchTerm(term);
             
             if (term.length < 2) {
-                if(document.getElementById('questions-view').style.display === 'none') {
-                    renderCategories(allData.categorias); // Se na home, reseta categorias
+                if (AppState.currentView === 'categories') {
+                    renderCategories(AppState.data.categorias);
                 }
                 return;
             }
 
-            // Modo Busca Global: esconde categorias, mostra perguntas filtradas de TODAS as categorias
-            document.getElementById('categories-view').style.display = 'none';
-            document.getElementById('nav-controls').style.display = 'block';
-            document.getElementById('questions-view').style.display = 'block';
-            document.getElementById('current-category-title').innerText = `Resultados para "${term}"`;
-
-            // Flatmap de todas as perguntas
-            let allQuestions = [];
-            allData.categorias.forEach(c => {
-                allQuestions = allQuestions.concat(c.perguntas);
-            });
-
-            const filtered = allQuestions.filter(q => 
+            // Global search across all questions
+            const allQuestions = AppState.data.categorias.flatMap(c => c.perguntas);
+            
+            const filteredQuestions = allQuestions.filter(q => 
                 q.pergunta.toLowerCase().includes(term) || 
                 q.resposta.toLowerCase().includes(term)
             );
 
-            renderQuestions(filtered);
+            AppState.setView('questions');
+            elements.categoryTitle.textContent = `Resultados para "${term}"`;
+            renderQuestions(filteredQuestions);
+        }
+
+        function handleVerseClick(ref, text) {
+            elements.modalRef.textContent = ref;
+            elements.modalText.textContent = text;
+            elements.verseModal.classList.add('modal--visible');
+            elements.closeModal.focus();
+        }
+
+        function handleModalClose(e) {
+            if (e.target === elements.verseModal || 
+                e.target === elements.closeModal ||
+                (e.type === 'keydown' && e.key === 'Escape')) {
+                elements.verseModal.classList.remove('modal--visible');
+            }
+        }
+
+        // ==========================================
+        // UTILITY FUNCTIONS
+        // ==========================================
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // ==========================================
+        // EVENT LISTENERS
+        // ==========================================
+        elements.backBtn.addEventListener('click', handleBackClick);
+
+        const debouncedSearch = debounce((term) => handleSearch(term), 300);
+        elements.searchBox.addEventListener('input', (e) => {
+            debouncedSearch(e.target.value);
         });
 
-        // Inicializar
-        loadData();
+        elements.verseModal.addEventListener('click', handleModalClose);
+        elements.closeModal.addEventListener('click', handleModalClose);
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') handleModalClose(e);
+        });
+
+        // Event delegation for verse buttons
+        elements.cardsContainer.addEventListener('click', (e) => {
+            if (e.target.classList.contains('verse-btn')) {
+                e.stopPropagation();
+                const ref = e.target.dataset.ref;
+                const text = e.target.dataset.text;
+                handleVerseClick(ref, text);
+            }
+        });
+
+        // ==========================================
+        // INITIALIZATION
+        // ==========================================
+        document.addEventListener('DOMContentLoaded', () => {
+            loadData();
+        });
     </script>
 </body>
 </html>
