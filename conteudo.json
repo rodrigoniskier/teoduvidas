@@ -1,53 +1,1512 @@
-{
-  "meta": {
-    "titulo": "Fé Reformada & Apologética",
-    "autor": "Rodrigo Niskier",
-    "versao": "1.0"
-  },
-  "categorias": [
-    {
-      "id": "cat_internas",
-      "titulo": "Dúvidas Internas (Bíblicas)",
-      "descricao": "Questões sobre inerrância, cânon e a coerência das Escrituras.",
-      "perguntas": [
-        {
-          "id": 101,
-          "pergunta": "A Bíblia contém erros ou contradições reais?",
-          "resposta": "Não. A Escritura é 'theopneustos' (inspirada por Deus) e, portanto, inerrante nos autógrafos originais. As aparentes discrepâncias são fruto de erros de copistas, variações de perspectiva dos autores humanos ou uso de linguagem fenomenológica (descrevendo as coisas como aparecem aos olhos, não cientificamente). A verdade teológica permanece intacta.",
-          "versiculos": [
-            {
-              "ref": "Salmo 19:7",
-              "texto": "A lei do Senhor é perfeita e restaura a alma; o testemunho do Senhor é fiel e dá sabedoria aos simples."
-            },
-            {
-              "ref": "2 Timóteo 3:16",
-              "texto": "Toda a Escritura é inspirada por Deus e útil para o ensino, para a repreensão, para a correção, para a educação na justiça."
-            }
-          ]
-        }
-      ]
+[
+  {
+    "meta": {
+      "titulo": "Fé Reformada & Apologética",
+      "autor": "Rodrigo Niskier",
+      "versao": "1.0"
     },
-    {
-      "id": "cat_opositores",
-      "titulo": "Dúvidas dos Opositores",
-      "descricao": "Respostas ao ateísmo, cientificismo e filosofia secular.",
-      "perguntas": [
-        {
-          "id": 201,
-          "pergunta": "Se Deus é bom, por que o mal existe?",
-          "resposta": "Deus não é o autor do pecado, mas em Sua soberania decretou permiti-lo para fins maiores de Sua glória e justiça. O mal moral é responsabilidade das criaturas livres (anjos e homens). Deus usa até o mal para promover o bem dos eleitos, como na cruz de Cristo — o maior crime da história que gerou a maior bênção.",
-          "versiculos": [
-            {
-              "ref": "Gênesis 50:20",
-              "texto": "Vós, na verdade, intentastes o mal contra mim; porém Deus o tornou em bem..."
-            },
-            {
-              "ref": "Romanos 8:28",
-              "texto": "Sabemos que todas as coisas cooperam para o bem daqueles que amam a Deus..."
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
+    "categorias": [
+      {
+        "id": "cat_internas",
+        "titulo": "Dúvidas Internas (Bíblicas)",
+        "descricao": "Questões sobre inerrância, cânon e a coerência das Escrituras.",
+        "perguntas": [
+          {
+            "id": 101,
+            "pergunta": "A Bíblia contém erros ou contradições reais?",
+            "resposta": "Não. A Escritura é 'theopneustos' (inspirada por Deus) e, portanto, inerrante nos autógrafos originais. As aparentes discrepâncias são fruto de erros de copistas, variações de perspectiva dos autores humanos ou uso de linguagem fenomenológica (descrevendo as coisas como aparecem aos olhos, não cientificamente). A verdade teológica permanece intacta.",
+            "versiculos": [
+              {
+                "ref": "Salmo 19:7",
+                "texto": "A lei do Senhor é perfeita e restaura a alma; o testemunho do Senhor é fiel e dá sabedoria aos simples."
+              },
+              {
+                "ref": "2 Timóteo 3:16",
+                "texto": "Toda a Escritura é inspirada por Deus e útil para o ensino, para a repreensão, para a correção, para a educação na justiça."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cat_opositores",
+        "titulo": "Dúvidas dos Opositores",
+        "descricao": "Respostas ao ateísmo, cientificismo e filosofia secular.",
+        "perguntas": [
+          {
+            "id": 201,
+            "pergunta": "Se Deus é bom, por que o mal existe?",
+            "resposta": "Deus não é o autor do pecado, mas em Sua soberania decretou permiti-lo para fins maiores de Sua glória e justiça. O mal moral é responsabilidade das criaturas livres (anjos e homens). Deus usa até o mal para promover o bem dos eleitos, como na cruz de Cristo — o maior crime da história que gerou a maior bênção.",
+            "versiculos": [
+              {
+                "ref": "Gênesis 50:20",
+                "texto": "Vós, na verdade, intentastes o mal contra mim; porém Deus o tornou em bem..."
+              },
+              {
+                "ref": "Romanos 8:28",
+                "texto": "Sabemos que todas as coisas cooperam para o bem daqueles que amam a Deus..."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cat_opositores",
+    "titulo": "Dúvidas dos Opositores (Apologética Filosófica)",
+    "descricao": "Respostas racionais e bíblicas ao ateísmo, cientificismo, problema do mal e desafios da filosofia secular.",
+    "perguntas": [
+      {
+        "id": "opo_01",
+        "pergunta": "A fé cristã é contrária à razão e à lógica?",
+        "resposta": "Não. A fé cristã é suprarracional (está acima da razão humana finita), mas não é irracional (contrária à lógica). A razão é uma ferramenta dada por Deus ('serva da teologia') para organizar e compreender a revelação, mas nunca para julgá-la. Cremos para entender (*Credo ut intelligam*). Onde a razão cessa por limitação, a fé prossegue baseada na autoridade de quem revela.",
+        "versiculos": [
+          {
+            "ref": "1 Pedro 3:15",
+            "texto": "...estando sempre preparados para responder a todo aquele que lhes pedir a razão da esperança que há em vocês."
+          },
+          {
+            "ref": "Isaías 1:18",
+            "texto": "Venham, pois, e vamos discutir a questão — diz o Senhor..."
+          }
+        ]
+      },
+      {
+        "id": "opo_02",
+        "pergunta": "Se Deus é bom e todo-poderoso, por que o mal existe?",
+        "resposta": "Deus não criou o mal (que não é uma substância, mas a ausência do bem), nem é o autor do pecado. Em Sua soberania, Ele decretou permitir a entrada do mal através da vontade de criaturas livres para fins maiores: a manifestação de Sua justiça na punição do pecado e de Sua misericórdia na redenção dos eleitos. O mal está sob controle divino e Ele o converte em bem para os Seus.",
+        "versiculos": [
+          {
+            "ref": "Gênesis 50:20",
+            "texto": "Vós, na verdade, intentastes o mal contra mim; porém Deus o tornou em bem..."
+          },
+          {
+            "ref": "Romanos 9:22-23",
+            "texto": "Que diremos, pois, se Deus, querendo mostrar a sua ira e dar a conhecer o seu poder, suportou com muita paciência os vasos de ira..."
+          }
+        ]
+      },
+      {
+        "id": "opo_03",
+        "pergunta": "É possível provar cientificamente que Deus existe?",
+        "resposta": "A ciência natural estuda o mundo material; Deus é Espírito e não cabe em um tubo de ensaio. Contudo, a criação oferece evidências esmagadoras (design inteligente, ajuste fino do universo, moralidade objetiva). A descrença não é por falta de provas (*Sensus Divinitatis*), mas por supressão moral da verdade. Deus se revelou suficientemente para que ninguém tenha desculpa.",
+        "versiculos": [
+          {
+            "ref": "Romanos 1:19-20",
+            "texto": "Porque os atributos invisíveis de Deus... são claramente vistos... por meio das coisas que foram criadas. Tais homens são, por isso, indesculpáveis."
+          },
+          {
+            "ref": "Salmo 19:1",
+            "texto": "Os céus proclamam a glória de Deus, e o firmamento anuncia as obras das suas mãos."
+          }
+        ]
+      },
+      {
+        "id": "opo_04",
+        "pergunta": "A teoria da Evolução refuta a Bíblia?",
+        "resposta": "Não. A Bíblia ensina que Deus é o Criador de todas as coisas e que criou tipos básicos de vida com capacidade de adaptação (microevolução). O naturalismo filosófico (evolução macroscópica cega e sem propósito) é incompatível com a fé. A complexidade irredutível da vida aponta para um Designer Inteligente, não para o acaso. A ciência verdadeira descreve as leis que Deus sustenta.",
+        "versiculos": [
+          {
+            "ref": "Colossenses 1:16-17",
+            "texto": "Pois nele foram criadas todas as coisas... Tudo foi criado por meio dele e para ele. Ele é antes de todas as coisas, e nele tudo subsiste."
+          }
+        ]
+      },
+      {
+        "id": "opo_05",
+        "pergunta": "Milagres são possíveis em um universo governado por leis físicas?",
+        "resposta": "Sim. As leis da física são descrições de como Deus *geralmente* sustenta o universo, não algemas que O prendem. Se Deus criou o universo *ex nihilo* (do nada), Ele tem poder para intervir dentro dele quando desejar, suspendendo ou alterando o curso natural para propósitos redentores. Negar milagres é pressupor, sem provas, que o sistema é fechado e que Deus não existe.",
+        "versiculos": [
+          {
+            "ref": "Jeremias 32:17",
+            "texto": "Ah! Senhor Deus! Eis que fizeste os céus e a terra com o teu grande poder e com o teu braço estendido. Para ti não há nada impossível."
+          }
+        ]
+      },
+      {
+        "id": "opo_06",
+        "pergunta": "Jesus realmente existiu ou é um mito plagiado?",
+        "resposta": "A existência histórica de Jesus é um fato atestado não apenas pelos Evangelhos (documentos históricos primários de alta confiabilidade), mas por fontes seculares e hostis do século I e II (Tácito, Josefo, Plínio, o Talmud). As alegações de plágio de mitos pagãos (Horus, Mitra) são baseadas em paralelismos forçados e dados fabricados que não resistem à análise historiográfica séria.",
+        "versiculos": [
+          {
+            "ref": "2 Pedro 1:16",
+            "texto": "Porque não lhes demos a conhecer o poder e a vinda de nosso Senhor Jesus Cristo seguindo fábulas engenhosamente inventadas, mas nós mesmos fomos testemunhas oculares da sua majestade."
+          }
+        ]
+      },
+      {
+        "id": "opo_07",
+        "pergunta": "Como um Deus de amor pode criar o Inferno?",
+        "resposta": "O Inferno é uma necessidade da justiça de Deus. Se Deus é infinitamente santo, o pecado contra Ele exige uma punição infinita. Um Deus que nunca pune o mal não é bom, é moralmente indiferente. O Inferno é o local onde a justiça retributiva de Deus é exercida sobre aqueles que rejeitaram a misericórdia oferecida em Cristo. Deus não tem prazer na morte do ímpio, mas é glorificado em Sua justiça.",
+        "versiculos": [
+          {
+            "ref": "Mateus 25:46",
+            "texto": "E estes irão para o castigo eterno, porém os justos, para a vida eterna."
+          },
+          {
+            "ref": "2 Tessalonicenses 1:9",
+            "texto": "Estes sofrerão penalidade de eterna destruição, banidos da face do Senhor e da glória do seu poder."
+          }
+        ]
+      },
+      {
+        "id": "opo_08",
+        "pergunta": "A moralidade não é relativa ou uma construção social?",
+        "resposta": "Se a moral fosse relativa, não poderíamos condenar o nazismo ou a escravidão como objetivamente errados, apenas como 'diferentes'. A existência de valores morais objetivos e universais (como a noção de justiça e direitos humanos) prova que existe um Legislador Moral transcendente. Sem Deus, 'tudo é permitido' (Dostoievski) e a moral vira mera preferência biológica.",
+        "versiculos": [
+          {
+            "ref": "Romanos 2:15",
+            "texto": "Estes mostram a norma da lei gravada no seu coração, testemunhando-lhes também a consciência..."
+          }
+        ]
+      },
+      {
+        "id": "opo_09",
+        "pergunta": "Por que o Cristianismo diz ser o único caminho?",
+        "resposta": "Porque apenas o Cristianismo trata o problema fundamental do homem: a culpa infinita diante de um Deus santo. Todas as outras religiões são tentativas humanas de alcançar Deus por obras/méritos. Apenas no Evangelho Deus desce ao homem. Jesus é o único caminho não por arrogância cristã, mas por realidade ontológica: só Ele pagou o preço do pecado e ressuscitou.",
+        "versiculos": [
+          {
+            "ref": "João 14:6",
+            "texto": "Jesus respondeu: — Eu sou o caminho, a verdade e a vida; ninguém vem ao Pai senão por mim."
+          },
+          {
+            "ref": "Atos 4:12",
+            "texto": "E não há salvação em nenhum outro, porque debaixo do céu não existe nenhum outro nome, dado entre os homens, pelo qual importa que sejamos salvos."
+          }
+        ]
+      },
+      {
+        "id": "opo_10",
+        "pergunta": "A doutrina da Trindade é contraditória (1+1+1=1)?",
+        "resposta": "Não há contradição lógica. Não dizemos que Deus é 1 pessoa e 3 pessoas (o que seria ilógico), nem 1 essência e 3 essências. Afirmamos que Deus é UMA essência indivisível subsistindo em TRÊS pessoas distintas (Pai, Filho e Espírito). É um mistério que transcende a matemática finita, mas revela a riqueza da vida interior de Deus, que é Amor eterno e relacional antes mesmo da criação.",
+        "versiculos": [
+          {
+            "ref": "Mateus 28:19",
+            "texto": "...batizando-os em nome [singular] do Pai, e do Filho, e do Espírito Santo."
+          },
+          {
+            "ref": "João 10:30",
+            "texto": "Eu e o Pai somos um."
+          }
+        ]
+      },
+      {
+        "id": "opo_11",
+        "pergunta": "Deus criou o tempo ou existe dentro dele?",
+        "resposta": "Deus é eterno e atemporal; Ele criou o tempo e o espaço e não está limitado por eles (transcendência). Ele vê o passado, o presente e o futuro em um eterno 'agora'. Contudo, Ele age dentro do tempo (imanência) para se relacionar com suas criaturas. Perguntar 'o que Deus fazia antes de criar o mundo' é um erro, pois não havia 'antes' quando não havia tempo.",
+        "versiculos": [
+          {
+            "ref": "Salmo 90:2",
+            "texto": "Antes que os montes nascessem... de eternidade a eternidade, tu és Deus."
+          },
+          {
+            "ref": "Isaías 57:15",
+            "texto": "Porque assim diz o Alto, o Sublime, que habita a eternidade..."
+          }
+        ]
+      },
+      {
+        "id": "opo_12",
+        "pergunta": "A religião não é apenas uma muleta psicológica?",
+        "resposta": "O argumento de Freud ('desejo de um pai protetor') é uma falácia genética; a origem psicológica de uma crença não invalida sua verdade. Além disso, o Cristianismo é uma 'muleta' terrível se fosse inventado: exige morrer para si mesmo, amar inimigos e enfrentar um Juiz santo. O ateísmo também pode ser visto psicologicamente como o desejo de 'matar o pai' para viver sem regras morais.",
+        "versiculos": [
+          {
+            "ref": "1 Coríntios 15:19",
+            "texto": "Se a nossa esperança em Cristo se limita apenas a esta vida, somos os mais infelizes de todos os homens."
+          }
+        ]
+      },
+      {
+        "id": "opo_13",
+        "pergunta": "Por que há tanta hipocrisia e violência na história da Igreja?",
+        "resposta": "A verdade do Cristianismo não depende da conduta dos cristãos, mas da perfeição de Cristo. A Igreja visível contém o 'joio' (falsos crentes) misturado ao trigo. As atrocidades (Inquisição, Cruzadas) foram cometidas por distorções do Evangelho, não pela obediência a ele. Onde o Evangelho genuíno floresceu, trouxe hospitais, escolas, abolição da escravatura e dignidade humana.",
+        "versiculos": [
+          {
+            "ref": "Mateus 13:28-30",
+            "texto": "Ele lhes respondeu: 'Inimigo foi quem fez isso'... 'Deixem que cresçam juntos até a colheita'."
+          }
+        ]
+      },
+      {
+        "id": "opo_14",
+        "pergunta": "Como conciliar a Ressurreição com a biologia?",
+        "resposta": "A ressurreição de Cristo não foi uma reanimação natural (como Lázaro, que morreu de novo), mas uma transformação para um novo estado de existência física imperecível (o 'corpo espiritual'). É um evento singular, uma 'nova criação' invadindo a velha. As evidências históricas (túmulo vazio, testemunhas oculares dispostas a morrer, a conversão de céticos como Tiago e Paulo) superam a improbabilidade biológica.",
+        "versiculos": [
+          {
+            "ref": "1 Coríntios 15:42-44",
+            "texto": "Semeia-se o corpo na corrupção, ressuscita na incorrupção... Semeia-se corpo natural, ressuscita corpo espiritual."
+          }
+        ]
+      },
+      {
+        "id": "opo_15",
+        "pergunta": "O que acontece com quem nunca ouviu falar de Jesus?",
+        "resposta": "Deus é soberano e justo. Ninguém será condenado *apenas* por ignorância histórica de Jesus, mas por pecar contra a lei moral que possui na consciência e rejeitar a revelação geral de Deus na criação. Não há 'inocentes' no sentido absoluto. Todos são culpados. Aqueles que são eleitos, Deus providenciará meios (missões, providência) para que a mensagem chegue até eles.",
+        "versiculos": [
+          {
+            "ref": "Romanos 2:12",
+            "texto": "Assim, todos os que pecaram sem lei também sem lei perecerão; e todos os que pecaram sob a lei serão julgados pela lei."
+          },
+          {
+            "ref": "Atos 17:26-27",
+            "texto": "...para buscarem a Deus, se, tateando, pudessem encontrá-lo, ainda que não esteja longe de cada um de nós."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cat_populares",
+    "titulo": "Questões Populares e Eclesiásticas (Soteriologia e Vida Prática)",
+    "descricao": "Dúvidas sobre salvação, eleição, sacramentos e a aplicação da fé na vida diária.",
+    "perguntas": [
+      {
+        "id": "pop_01",
+        "pergunta": "Se Deus predestina, o ser humano é um robô?",
+        "resposta": "Não. A Predestinação não anula a liberdade de agência (fazer o que se deseja), mas a liberdade de neutralidade. O homem age voluntariamente segundo sua natureza. Como sua natureza caída ama o pecado, ele *livremente* rejeita a Deus. A graça da eleição não força a vontade contra o querer, mas *transforma* o querer, fazendo o homem amar o que antes odiava. Somos livres, mas Deus é soberano sobre nossa liberdade.",
+        "versiculos": [
+          {
+            "ref": "Filipenses 2:13",
+            "texto": "Porque Deus é quem efetua em vocês tanto o querer como o realizar, segundo a sua boa vontade."
+          },
+          {
+            "ref": "Provérbios 16:9",
+            "texto": "O coração do homem planeja o seu caminho, mas o Senhor lhe dirige os passos."
+          }
+        ]
+      },
+      {
+        "id": "pop_02",
+        "pergunta": "É injusto Deus escolher uns e não outros?",
+        "resposta": "Não. Injustiça seria punir um inocente ou não punir o culpado. Todos pecaram e merecem a condenação (justiça). Se Deus salva alguns, isso é Misericórdia. Se deixa outros em seus pecados, isso é Justiça. Ninguém recebe 'injustiça'; alguns recebem o que merecem, outros recebem o que não merecem (graça). O mistério é: por que Ele salvaria *alguém*, não por que não salva *todos*.",
+        "versiculos": [
+          {
+            "ref": "Romanos 9:14-15",
+            "texto": "Que diremos, pois? Que há injustiça da parte de Deus? De modo nenhum! Pois ele diz a Moisés: Terei misericórdia de quem me aprouver..."
+          }
+        ]
+      },
+      {
+        "id": "pop_03",
+        "pergunta": "O ser humano tem livre-arbítrio para escolher a Deus?",
+        "resposta": "No estado de pecado, o livre-arbítrio está 'escravo' (*Servum Arbitrium*). O homem natural é livre para escolher o que sua natureza deseja, mas como sua natureza é hostil a Deus, ele *nunca* escolherá a Cristo por conta própria. Ele precisa ser libertado (regenerado) pelo Espírito Santo para então poder crer. A fé não é a causa da regeneração, mas o resultado dela.",
+        "versiculos": [
+          {
+            "ref": "João 6:44",
+            "texto": "Ninguém pode vir a mim se o Pai, que me enviou, não o trouxer."
+          },
+          {
+            "ref": "Romanos 8:7",
+            "texto": "Porque a inclinação da carne é inimizade contra Deus, pois não está sujeita à lei de Deus, nem mesmo pode estar."
+          }
+        ]
+      },
+      {
+        "id": "pop_04",
+        "pergunta": "Se Deus já escolheu quem será salvo, para que evangelizar?",
+        "resposta": "Porque Deus ordenou os *fins* (a salvação dos eleitos) e também os *meios* (a pregação do Evangelho). A fé vem pelo ouvir. Não sabemos quem são os eleitos, por isso pregamos a todos. A evangelização é o instrumento que o Espírito Santo usa para chamar eficazmente as Suas ovelhas. Evangelizamos *porque* a eleição garante que nossa pregação não será em vão: alguns crerão.",
+        "versiculos": [
+          {
+            "ref": "2 Timóteo 2:10",
+            "texto": "Por esta razão, tudo suporto por causa dos eleitos, para que também eles obtenham a salvação que está em Cristo Jesus..."
+          },
+          {
+            "ref": "Atos 18:9-10",
+            "texto": "...não se cale, porque eu estou com você... pois tenho muito povo nesta cidade."
+          }
+        ]
+      },
+      {
+        "id": "pop_05",
+        "pergunta": "Cristo morreu por todas as pessoas do mundo?",
+        "resposta": "A morte de Cristo tem valor infinito (suficiente para todos), mas eficácia particular (eficiente apenas para os eleitos). Se Ele tivesse morrido para salvar cada indivíduo e alguns fossem para o inferno, o sangue de Cristo teria falhado. Ele morreu para *garantir* a salvação do Seu povo, pagando efetivamente a dívida deles, e não apenas para tornar a salvação possível.",
+        "versiculos": [
+          {
+            "ref": "João 10:11",
+            "texto": "Eu sou o bom pastor. O bom pastor dá a vida pelas ovelhas."
+          },
+          {
+            "ref": "Mateus 1:21",
+            "texto": "...porque ele salvará o seu povo dos pecados deles."
+          }
+        ]
+      },
+      {
+        "id": "pop_06",
+        "pergunta": "Um cristão verdadeiro pode perder a salvação?",
+        "resposta": "Não. Aqueles que foram verdadeiramente regenerados, justificados e selados pelo Espírito Santo jamais perderão a salvação. Deus é fiel para completar a obra que começou. Quem 'cai da graça' e não retorna, prova que nunca foi verdadeiramente convertido (1 João 2:19). A segurança não está na força da nossa fé, mas na imutabilidade do decreto e do amor de Deus.",
+        "versiculos": [
+          {
+            "ref": "João 10:28",
+            "texto": "Eu lhes dou a vida eterna; jamais perecerão, e ninguém as arrebatará da minha mão."
+          },
+          {
+            "ref": "Filipenses 1:6",
+            "texto": "Estou plenamente certo de que aquele que começou boa obra em vocês há de completá-la até o Dia de Cristo Jesus."
+          }
+        ]
+      },
+      {
+        "id": "pop_07",
+        "pergunta": "Como posso ter certeza absoluta de que sou salvo?",
+        "resposta": "A certeza não vem de uma revelação mística, mas de três fontes: 1) A promessa objetiva de Deus (quem crê tem a vida); 2) O testemunho interno do Espírito Santo nos fazendo clamar 'Aba, Pai'; 3) A evidência de frutos de santificação (amor aos irmãos, ódio ao pecado). A luta contra o pecado é sinal de vida; o cadáver espiritual não luta.",
+        "versiculos": [
+          {
+            "ref": "1 João 5:13",
+            "texto": "Estas coisas escrevi a vocês que creem no nome do Filho de Deus, para que saibam que têm a vida eterna."
+          },
+          {
+            "ref": "Romanos 8:16",
+            "texto": "O próprio Espírito confirma ao nosso espírito que somos filhos de Deus."
+          }
+        ]
+      },
+      {
+        "id": "pop_08",
+        "pergunta": "Eu cometi o pecado imperdoável (blasfêmia contra o Espírito)?",
+        "resposta": "Se você está preocupado com isso, provavelmente não cometeu. A blasfêmia contra o Espírito é um estado de endurecimento total e consciente, onde a pessoa atribui a obra de Deus a Satanás e rejeita a verdade com ódio deliberado, sem nenhum desejo de arrependimento. Quem teme a Deus e deseja o perdão demonstra que o Espírito ainda opera em seu coração.",
+        "versiculos": [
+          {
+            "ref": "João 6:37",
+            "texto": "Todo aquele que o Pai me dá virá a mim; e o que vem a mim, de modo nenhum o lançarei fora."
+          }
+        ]
+      },
+      {
+        "id": "pop_09",
+        "pergunta": "Por que batizar bebês se eles não têm consciência?",
+        "resposta": "O batismo é o sinal da Aliança, sucedendo a circuncisão (Colossenses 2:11-12). No AT, os filhos dos crentes recebiam o sinal da aliança; no NT, a promessa continua 'para vós e vossos filhos' (Atos 2:39). O batismo não salva o bebê, mas o insere na comunidade visível da igreja e marca a promessa de Deus sobre ele. É um sinal da iniciativa de Deus, não da maturidade humana.",
+        "versiculos": [
+          {
+            "ref": "Atos 16:33",
+            "texto": "...e, logo a seguir, foi batizado, ele e todos os da sua casa."
+          },
+          {
+            "ref": "Gênesis 17:7",
+            "texto": "Estabelecerei a minha aliança entre mim e você e a sua descendência... para ser o seu Deus e o Deus da sua descendência."
+          }
+        ]
+      },
+      {
+        "id": "pop_10",
+        "pergunta": "O batismo precisa ser por imersão para ser válido?",
+        "resposta": "Não. A palavra grega *baptizo* significa lavagem ritual e era usada para lavar mesas e utensílios (Marcos 7:4), o que não se faz por imersão. O que importa é a aplicação da água em nome da Trindade, simbolizando a purificação. A aspersão (jogar água) simboliza melhor a descida do Espírito e o aspergimento do sangue de Cristo descritos na Bíblia.",
+        "versiculos": [
+          {
+            "ref": "Ezequiel 36:25",
+            "texto": "Então aspergirei água pura sobre vocês, e vocês ficarão purificados..."
+          },
+          {
+            "ref": "Atos 1:5",
+            "texto": "Porque João, na verdade, batizou com água, mas vocês serão batizados com o Espírito Santo..."
+          }
+        ]
+      },
+      {
+        "id": "pop_11",
+        "pergunta": "Na Santa Ceia, o pão vira o corpo de Cristo?",
+        "resposta": "Não (contra a Transubstanciação católica e Consubstanciação luterana). O corpo físico de Cristo está no céu. Contudo, a Ceia não é apenas memória (contra Zwinglio). Pelo poder do Espírito Santo, Cristo está *espiritualmente* presente, e os crentes são alimentados verdadeiramente com Seu corpo e sangue pela fé. É uma comunhão real e mística com o Cristo vivo.",
+        "versiculos": [
+          {
+            "ref": "1 Coríntios 10:16",
+            "texto": "O cálice da bênção que abençoamos não é a comunhão do sangue de Cristo? O pão que partimos não é a comunhão do corpo de Cristo?"
+          }
+        ]
+      },
+      {
+        "id": "pop_12",
+        "pergunta": "É possível ser cristão sem ir à igreja?",
+        "resposta": "Ser cristão é ser parte do Corpo de Cristo. Um membro decepado do corpo morre. Embora a salvação não venha da instituição, a vida cristã normal é *necessariamente* comunitária. 'Desigrejados' vivem em desobediência, privados dos meios de graça (Palavra pregada, Sacramentos, disciplina e comunhão) essenciais para a perseverança.",
+        "versiculos": [
+          {
+            "ref": "Hebreus 10:25",
+            "texto": "Não deixemos de nos congregar, como é costume de alguns..."
+          },
+          {
+            "ref": "Efésios 4:16",
+            "texto": "de quem todo o corpo, bem ajustado e consolidado... efetua o seu próprio aumento para a edificação de si mesmo em amor."
+          }
+        ]
+      },
+      {
+        "id": "pop_13",
+        "pergunta": "O que acontece com crianças que morrem na infância?",
+        "resposta": "A Escritura nos dá base para crer na salvação dos filhos dos crentes que morrem na infância, com base na aliança (Deus é o Deus da tua descendência). Quanto aos demais, confiamos na misericórdia do Juiz de toda a terra. A Confissão de Fé fala de 'eleitos que morrem na infância', indicando que Deus pode regenerar soberanamente sem o uso ordinário da pregação.",
+        "versiculos": [
+          {
+            "ref": "2 Samuel 12:23",
+            "texto": "Porém, agora que a criança morreu... Eu irei a ela, porém ela não voltará para mim."
+          },
+          {
+            "ref": "Marcos 10:14",
+            "texto": "Deixem vir a mim as crianças... porque dos tais é o Reino de Deus."
+          }
+        ]
+      },
+      {
+        "id": "pop_14",
+        "pergunta": "O dízimo é obrigatório no Novo Testamento?",
+        "resposta": "O dízimo como 'imposto' do templo cessou, mas o princípio da generosidade proporcional permanece e é expandido. O NT não impõe um teto de 10%, mas um piso de gratidão. Jesus validou o dízimo (Mateus 23:23) e Paulo ordena que cada um contribua 'conforme a sua prosperidade'. O cristão deve contribuir com alegria para o sustento do culto e dos necessitados.",
+        "versiculos": [
+          {
+            "ref": "1 Coríntios 16:2",
+            "texto": "No primeiro dia da semana, cada um de vocês separe uma quantia, conforme a sua prosperidade..."
+          },
+          {
+            "ref": "2 Coríntios 9:7",
+            "texto": "Cada um contribua segundo tiver proposto no coração, não com tristeza ou por necessidade; porque Deus ama quem dá com alegria."
+          }
+        ]
+      },
+      {
+        "id": "pop_15",
+        "pergunta": "O cristão deve guardar o Sábado ou o Domingo?",
+        "resposta": "O princípio moral de dedicar um dia em sete ao Senhor é eterno (Criação/Decálogo). A mudança do sétimo dia (Sábado) para o primeiro (Domingo) ocorreu na era apostólica para celebrar a Nova Criação inaugurada na Ressurreição de Cristo. O 'Dia do Senhor' é o sábado cristão, devendo ser santificado com culto público, obras de misericórdia e descanso.",
+        "versiculos": [
+          {
+            "ref": "Atos 20:7",
+            "texto": "No primeiro dia da semana, estando nós reunidos com o fim de partir o pão..."
+          },
+          {
+            "ref": "Apocalipse 1:10",
+            "texto": "Achei-me em espírito, no dia do Senhor..."
+          }
+        ]
+      },
+      {
+        "id": "pop_16",
+        "pergunta": "Um crente pode ficar endemoninhado?",
+        "resposta": "Não. Um cristão verdadeiro é templo do Espírito Santo. A luz não tem comunhão com as trevas (2 Co 6:15). O Espírito e um demônio não podem coabitar o mesmo corpo. O crente pode ser tentado, oprimido e atacado externamente por demônios (batalha espiritual), mas nunca possuído ou controlado internamente por eles.",
+        "versiculos": [
+          {
+            "ref": "1 João 4:4",
+            "texto": "Filhinhos... maior é aquele que está em vocês do que aquele que está no mundo."
+          },
+          {
+            "ref": "Colossenses 1:13",
+            "texto": "Ele nos libertou do império das trevas e nos transportou para o reino do Filho do seu amor."
+          }
+        ]
+      },
+      {
+        "id": "pop_17",
+        "pergunta": "Depressão é falta de fé ou pecado?",
+        "resposta": "Nem sempre. Somos seres psicossomáticos (corpo e alma). A depressão pode ter causas espirituais (pecado não confessado, falta de esperança), mas também biológicas e emocionais (esgotamento, química cerebral). Grandes homens de Deus (Elias, Davi, Spurgeon) enfrentaram angústias profundas. Deve-se tratar com oração, aconselhamento bíblico e, se necessário, medicina, sem estigmatizar o sofrimento.",
+        "versiculos": [
+          {
+            "ref": "Salmo 42:11",
+            "texto": "Por que você está abatida, ó minha alma? Por que se perturba dentro de mim? Espere em Deus..."
+          },
+          {
+            "ref": "1 Reis 19:4",
+            "texto": "Ele [Elias]... pediu para si a morte, dizendo: Basta! Toma agora, ó Senhor, a minha vida..."
+          }
+        ]
+      },
+      {
+        "id": "pop_18",
+        "pergunta": "Cremação é pecado? Afeta a ressurreição?",
+        "resposta": "Não é pecado, embora o sepultamento seja a tradição judaico-cristã que melhor simboliza o 'dormir' e aguardar a ressurreição (semear o corpo). Deus é Todo-Poderoso para ressuscitar um corpo cremado, devorado por feras ou desintegrado no mar. A escolha deve ser feita com consciência livre, mas mantendo o respeito pelo corpo que foi templo do Espírito.",
+        "versiculos": [
+          {
+            "ref": "1 Coríntios 15:35-38",
+            "texto": "...Mas Deus lhe dá corpo como lhe aprouve... Assim também é a ressurreição dos mortos."
+          }
+        ]
+      },
+      {
+        "id": "pop_19",
+        "pergunta": "Mulheres podem ser pastoras ou presbíteras?",
+        "resposta": "Na perspectiva reformada clássica (complementarista), homens e mulheres têm igual dignidade e valor, mas papéis distintos na família e na igreja. O ofício de ensino autoritativo e governo (presbítero/pastor) é reservado aos homens qualificados, conforme a ordem da criação estabelecida por Paulo. Mulheres exercem dons vitais (diaconia, ensino de outras mulheres/crianças, profecia no sentido lato), mas não a liderança oficial.",
+        "versiculos": [
+          {
+            "ref": "1 Timóteo 2:12",
+            "texto": "E não permito que a mulher ensine, nem exerça autoridade de homem; esteja, porém, em silêncio."
+          },
+          {
+            "ref": "1 Timóteo 3:2",
+            "texto": "É necessário, portanto, que o bispo seja irrepreensível, esposo de uma só mulher..."
+          }
+        ]
+      },
+      {
+        "id": "pop_20",
+        "pergunta": "O que é a 'Graça Comum'?",
+        "resposta": "É a graça não-salvífica que Deus concede a todos os homens (crentes e descrentes). Por ela, Deus refreia o pecado na sociedade, permite o avanço da ciência, arte e cultura, e dá bênçãos naturais (chuva, sol, alegria). Isso explica por que descrentes podem fazer coisas boas, amar seus filhos e descobrir a cura de doenças, embora não possam agradar a Deus espiritualmente sem fé.",
+        "versiculos": [
+          {
+            "ref": "Mateus 5:45",
+            "texto": "...porque ele faz nascer o seu sol sobre maus e bons e vir chuvas sobre justos e injustos."
+          },
+          {
+            "ref": "Salmo 145:9",
+            "texto": "O Senhor é bom para todos, e as suas ternas misericórdias permeiam todas as suas obras."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cat_sistematica",
+    "titulo": "O Conflito Dogmático (Teologia Sistemática)",
+    "descricao": "Questões fundamentais que definem a ortodoxia reformada, abrangendo Teontologia, Antropologia, Cristologia e Soteriologia.",
+    "perguntas": [
+      {
+        "id": "sis_01",
+        "pergunta": "O que é a Simplicidade Divina e por que ela importa?",
+        "resposta": "A Simplicidade Divina ensina que Deus não é composto de partes (físicas ou metafísicas). Ele não 'tem' atributos; Ele *é* seus atributos. Seu amor não é diferente de Sua justiça ou de Sua essência. Se Deus fosse composto, Ele dependeria das partes que O compõem, e portanto não seria o Criador absoluto e independente (*Aseidade*). Negar a simplicidade é tornar Deus uma criatura complexa.",
+        "versiculos": [
+          {
+            "ref": "1 João 1:5",
+            "texto": "Deus é luz, e não há nele treva nenhuma."
+          },
+          {
+            "ref": "Êxodo 3:14",
+            "texto": "Disse Deus a Moisés: EU SOU O QUE SOU."
+          }
+        ]
+      },
+      {
+        "id": "sis_02",
+        "pergunta": "Deus tem duas vontades contraditórias?",
+        "resposta": "Não. Falamos teologicamente de 'Vontade Decretiva' (o que Deus determina que acontecerá) e 'Vontade Preceptiva' (o que Ele ordena que façamos). Elas não se contradizem, mas se relacionam com esferas diferentes. Deus pode decretar a morte de Cristo (Decretiva) enquanto ordena 'não matarás' (Preceptiva). Ambas visam a glória de Deus, mas uma revela Seu propósito secreto e a outra Seu padrão moral.",
+        "versiculos": [
+          {
+            "ref": "Deuteronômio 29:29",
+            "texto": "As coisas encobertas pertencem ao Senhor, nosso Deus, porém as reveladas nos pertencem, a nós e a nossos filhos..."
+          },
+          {
+            "ref": "Atos 2:23",
+            "texto": "Sendo este entregue pelo determinado desígnio e presciência de Deus, vocês o mataram..."
+          }
+        ]
+      },
+      {
+        "id": "sis_03",
+        "pergunta": "A alma é criada ou herdada dos pais?",
+        "resposta": "A visão reformada predominante (embora não dogmática) é o 'Criacionismo' da alma: Deus cria cada alma individualmente no momento da concepção. O 'Traducianismo' (alma gerada pelos pais) explica melhor a transmissão do pecado, mas tende a materializar a alma. O Criacionismo defende que Deus cria a alma pura, mas ela se torna pecaminosa ao ser unida a um corpo gerado na linhagem caída de Adão (imputação).",
+        "versiculos": [
+          {
+            "ref": "Zacarias 12:1",
+            "texto": "...o Senhor, que estendeu o céu, fundou a terra e formou o espírito do homem dentro dele."
+          },
+          {
+            "ref": "Hebreus 12:9",
+            "texto": "...Pai dos espíritos..."
+          }
+        ]
+      },
+      {
+        "id": "sis_04",
+        "pergunta": "O que foi o Pacto das Obras?",
+        "resposta": "Foi o acordo estabelecido por Deus com Adão antes da Queda. A condição era a obediência perfeita (não comer do fruto); a promessa era a vida eterna confirmada; a penalidade era a morte. Adão, como representante federal da humanidade, falhou. Cristo, o Segundo Adão, veio cumprir o que o primeiro falhou, obedecendo perfeitamente à Lei para nos dar a vida (Pacto da Graça).",
+        "versiculos": [
+          {
+            "ref": "Oseias 6:7",
+            "texto": "Mas eles, como Adão, transgrediram a aliança; eles me traíram."
+          },
+          {
+            "ref": "Romanos 5:19",
+            "texto": "Porque, como, pela desobediência de um só homem, muitos se tornaram pecadores, assim também, por meio da obediência de um só, muitos se tornarão justos."
+          }
+        ]
+      },
+      {
+        "id": "sis_05",
+        "pergunta": "O pecado de Adão é nosso apenas por imitação?",
+        "resposta": "Não. A teologia reformada rejeita o pelagianismo (imitação). Defendemos a 'Imputação Imediata': como Adão era nosso cabeça federal, a culpa legal do seu pecado foi creditada (imputada) a todos os seus descendentes instantaneamente. Nascemos condenados não só porque pecamos, mas porque pecamos *em Adão*. É por esse mesmo princípio de representação que a justiça de Cristo nos é imputada.",
+        "versiculos": [
+          {
+            "ref": "Romanos 5:12",
+            "texto": "Portanto, assim como por um só homem entrou o pecado no mundo, e pelo pecado veio a morte, assim também a morte passou a todos os homens, porque todos pecaram."
+          }
+        ]
+      },
+      {
+        "id": "sis_06",
+        "pergunta": "O ser humano é composto de corpo, alma e espírito (Tricotomia)?",
+        "resposta": "A visão majoritária na teologia reformada é a 'Dicotomia': o homem é composto de duas partes essenciais, material (corpo) e imaterial (alma/espírito). Bíblicamente, 'alma' e 'espírito' são termos intercambiáveis para a mesma substância imaterial, embora com nuances funcionais (alma como sede da vida/emoção, espírito como sede da relação com Deus). A tricotomia frequentemente leva a erros doutrinários sobre a santificação.",
+        "versiculos": [
+          {
+            "ref": "Mateus 10:28",
+            "texto": "Não temam os que matam o corpo e não podem matar a alma; temam, antes, aquele que pode fazer perecer no inferno tanto a alma como o corpo."
+          }
+        ]
+      },
+      {
+        "id": "sis_07",
+        "pergunta": "Como duas naturezas coexistem em Cristo (União Hipostática)?",
+        "resposta": "No Concílio de Calcedônia (451 d.C.), a Igreja definiu que Cristo é uma só Pessoa com duas naturezas (divina e humana), 'sem confusão, sem mudança, sem divisão, sem separação'. As propriedades de cada natureza são preservadas (o humano não vira divino, nem o divino vira humano), mas ambas são atribuídas à única Pessoa do Filho. Maria deu à luz a Pessoa de Deus, segundo a humanidade.",
+        "versiculos": [
+          {
+            "ref": "Colossenses 2:9",
+            "texto": "Porque nele habita corporalmente toda a plenitude da divindade."
+          },
+          {
+            "ref": "Romanos 9:5",
+            "texto": "...deles descendem os patriarcas, e deles descende o Cristo, segundo a carne, o qual é sobre todos, Deus bendito para sempre. Amém!"
+          }
+        ]
+      },
+      {
+        "id": "sis_08",
+        "pergunta": "Jesus poderia ter pecado?",
+        "resposta": "Não. Embora Sua natureza humana fosse real e tentável, ela estava hipostaticamente unida à Pessoa Divina do Filho, que é imutavelmente santa. Cristo era *non posse peccare* (não podia pecar). Suas tentações foram reais provas de resistência, não dúvidas morais internas. Se Ele pudesse pecar, Deus poderia pecar, o que é blasfêmia. Ele é o Cordeiro sem defeito.",
+        "versiculos": [
+          {
+            "ref": "João 5:19",
+            "texto": "...o Filho nada pode fazer de si mesmo, mas somente aquilo que vê o Pai fazer."
+          },
+          {
+            "ref": "Hebreus 4:15",
+            "texto": "...foi ele tentado em todas as coisas, à nossa semelhança, mas sem pecado."
+          }
+        ]
+      },
+      {
+        "id": "sis_09",
+        "pergunta": "Jesus foi ao Inferno após a morte?",
+        "resposta": "Quando o Credo diz 'desceu ao Hades', a interpretação reformada (Calvino/Catecismo) não é que Ele desceu localmente ao lugar dos condenados para sofrer ou pregar, mas que: 1) Ele sofreu as angústias do inferno *na cruz* (desamparo divino); e 2) Ele permaneceu sob o poder da morte e da sepultura até o terceiro dia (estado de humilhação máxima). Sua vitória foi na cruz ('Está consumado'), não no inferno.",
+        "versiculos": [
+          {
+            "ref": "Lucas 23:43",
+            "texto": "Jesus lhe respondeu: — Em verdade lhe digo que hoje você estará comigo no paraíso."
+          }
+        ]
+      },
+      {
+        "id": "sis_10",
+        "pergunta": "Por que a 'Obediência Ativa' de Cristo é necessária?",
+        "resposta": "Cristo não apenas morreu para pagar nossa dívida (Obediência Passiva), mas viveu uma vida perfeita cumprindo toda a Lei em nosso lugar (Obediência Ativa). A justificação exige não só o perdão dos pecados (zerar a conta), mas a imputação de justiça positiva (crédito infinito). Sem a obediência ativa de Cristo, seríamos inocentes como Adão antes da queda, mas não teríamos o direito à vida eterna conquistado.",
+        "versiculos": [
+          {
+            "ref": "Mateus 5:17",
+            "texto": "Não pensem que vim revogar a Lei ou os Profetas; não vim para revogar, mas para cumprir."
+          },
+          {
+            "ref": "Romanos 5:19",
+            "texto": "...por meio da obediência de um só, muitos se tornarão justos."
+          }
+        ]
+      },
+      {
+        "id": "sis_11",
+        "pergunta": "O Espírito Santo procede só do Pai?",
+        "resposta": "A teologia ocidental e reformada defende o *Filioque* (e do Filho). O Espírito procede eternamente do Pai *e do Filho*. Isso é vital para a Trindade, pois estabelece a relação mútua entre as três pessoas e confirma que o Espírito é o Espírito de Cristo, enviado por Ele. Negar o *Filioque* tende a desconectar o Espírito da obra de Cristo, abrindo portas para misticismos subjetivos.",
+        "versiculos": [
+          {
+            "ref": "João 15:26",
+            "texto": "Quando, porém, vier o Consolador, que eu lhes enviarei da parte do Pai..."
+          },
+          {
+            "ref": "Gálatas 4:6",
+            "texto": "Deus enviou o Espírito do seu Filho aos nossos corações..."
+          }
+        ]
+      },
+      {
+        "id": "sis_12",
+        "pergunta": "O Batismo com o Espírito Santo é uma segunda bênção?",
+        "resposta": "Não. Na teologia reformada, o Batismo com o Espírito ocorre na regeneração/conversão, inserindo o crente no Corpo de Cristo. Não é uma experiência pós-conversão para 'elites espirituais'. O que a Bíblia ordena após a conversão é o *enchimento* contínuo do Espírito (Efésios 5:18), que é progressivo e ético, não um evento único de poder extra.",
+        "versiculos": [
+          {
+            "ref": "1 Coríntios 12:13",
+            "texto": "Pois, em um só Espírito, todos nós fomos batizados em um só corpo... e a todos nós foi dado beber de um só Espírito."
+          },
+          {
+            "ref": "Romanos 8:9",
+            "texto": "...E, se alguém não tem o Espírito de Cristo, esse tal não é dele."
+          }
+        ]
+      },
+      {
+        "id": "sis_13",
+        "pergunta": "A Regeneração precede a Fé?",
+        "resposta": "Sim (Monergismo). Um homem morto espiritualmente não pode crer para viver; ele precisa viver para crer. Deus primeiro vivifica o coração de pedra (regeneração), capacitando-o a responder ao Evangelho com fé e arrependimento. A ordem lógica da salvação (*Ordo Salutis*) coloca o novo nascimento como causa, e a fé como efeito imediato.",
+        "versiculos": [
+          {
+            "ref": "1 João 5:1",
+            "texto": "Todo aquele que crê que Jesus é o Cristo é nascido [foi gerado] de Deus."
+          },
+          {
+            "ref": "Efésios 2:4-5",
+            "texto": "...estando nós mortos em nossas ofensas, nos deu vida juntamente com Cristo..."
+          }
+        ]
+      },
+      {
+        "id": "sis_14",
+        "pergunta": "A Justificação é um processo de tornar-se justo?",
+        "resposta": "Não. Justificação é um ato legal e forense (de tribunal), único e instantâneo, onde Deus *declara* o pecador justo com base na justiça de Cristo imputada a ele. Não é uma mudança interna (isso é Santificação), mas uma mudança de *status*. Confundir justificação com santificação (como faz Roma) é destruir o fundamento da paz com Deus, pois nossa santificação é sempre imperfeita nesta vida.",
+        "versiculos": [
+          {
+            "ref": "Romanos 4:5",
+            "texto": "Mas, ao que não trabalha, porém crê naquele que justifica o ímpio, a sua fé lhe é atribuída como justiça."
+          },
+          {
+            "ref": "Romanos 8:33",
+            "texto": "Quem intentará acusação contra os eleitos de Deus? É Deus quem os justifica."
+          }
+        ]
+      },
+      {
+        "id": "sis_15",
+        "pergunta": "O que é o Princípio Regulador do Culto?",
+        "resposta": "É o princípio reformado de que, no culto público, só podemos fazer aquilo que Deus ordenou positivamente na Escritura. O que não é ordenado, é proibido. Isso contrasta com o Princípio Normativo (luterano/anglicano), que permite o que não é proibido. O culto deve ser centrado em Deus, simples e bíblico: leitura, pregação, oração, cânticos bíblicos e sacramentos.",
+        "versiculos": [
+          {
+            "ref": "Deuteronômio 12:32",
+            "texto": "Tenham o cuidado de fazer tudo o que eu lhes ordeno; não acrescentem nem tirem nada."
+          },
+          {
+            "ref": "Mateus 15:9",
+            "texto": "E em vão me adoram, ensinando doutrinas que são preceitos humanos."
+          }
+        ]
+      },
+      {
+        "id": "sis_16",
+        "pergunta": "Quais são as Marcas da Igreja Verdadeira?",
+        "resposta": "Conforme a Confissão Belga e a tradição reformada, uma igreja verdadeira é identificada por três marcas: 1) A pura pregação do Evangelho; 2) A correta administração dos Sacramentos (Batismo e Ceia); 3) O exercício fiel da disciplina eclesiástica. Onde estas marcas estão ausentes ou corrompidas, a igreja se torna uma 'sinagoga de Satanás', mesmo que use o nome de Cristo.",
+        "versiculos": [
+          {
+            "ref": "Atos 2:42",
+            "texto": "E perseveravam na doutrina dos apóstolos e na comunhão, no partir do pão e nas orações."
+          },
+          {
+            "ref": "Gálatas 1:8",
+            "texto": "Mas, ainda que nós ou mesmo um anjo vindo do céu pregue a vocês um evangelho diferente daquele que lhes pregamos, que seja anátema."
+          }
+        ]
+      },
+      {
+        "id": "sis_17",
+        "pergunta": "Qual a forma bíblica de Governo da Igreja?",
+        "resposta": "Cremos que o sistema Presbiteriano (governo por uma pluralidade de presbíteros/anciãos) é o modelo apostólico (*Jus Divinum*). Diferente do Episcopalismo (governo de um bispo sobre vários pastores) e do Congregacionalismo (democracia direta sem autoridade regional), o Presbiterianismo equilibra a autoridade local com a conciliar (sínodos e assembleias), como visto no Concílio de Jerusalém.",
+        "versiculos": [
+          {
+            "ref": "Atos 14:23",
+            "texto": "E, promovendo-lhes, em cada igreja, a eleição de presbíteros, depois de orar com jejuns, os encomendaram ao Senhor..."
+          },
+          {
+            "ref": "Atos 15:6",
+            "texto": "Então se reuniram os apóstolos e os presbíteros para examinar a questão."
+          }
+        ]
+      },
+      {
+        "id": "sis_18",
+        "pergunta": "A Igreja substituiu Israel?",
+        "resposta": "Não usamos o termo 'substituição' (Teologia da Substituição), mas 'expansão' ou 'cumprimento'. A Igreja é o Israel de Deus, o verdadeiro ramo da oliveira onde os gentios foram enxertados. Não há dois povos de Deus (um judeu e um cristão) com destinos separados (Dispensacionalismo), mas um único povo da aliança, composto de judeus e gentios salvos pela fé no mesmo Messias.",
+        "versiculos": [
+          {
+            "ref": "Gálatas 6:16",
+            "texto": "E, a todos os que andarem em conformidade com esta regra, paz e misericórdia sejam sobre eles e sobre o Israel de Deus."
+          },
+          {
+            "ref": "Efésios 2:14",
+            "texto": "Porque ele é a nossa paz, o qual de ambos [judeus e gentios] fez um; e, tendo derrubado a parede da separação..."
+          }
+        ]
+      },
+      {
+        "id": "sis_19",
+        "pergunta": "O Milênio (Apocalipse 20) é literal?",
+        "resposta": "A visão majoritária na teologia reformada é o Amilenismo (ou Milênio Realizado). O 'mil anos' é um número simbólico de completude, referindo-se à Era da Igreja (entre a 1ª e a 2ª vinda de Cristo), onde Cristo reina espiritualmente nos céus e Satanás está 'amarrado' (impedido de enganar as nações para destruir a Igreja). Não esperamos um reino político terrestre de mil anos após a vinda de Cristo.",
+        "versiculos": [
+          {
+            "ref": "Mateus 12:29",
+            "texto": "Ou como alguém pode entrar na casa do valente e roubar-lhe os bens sem primeiro amarrá-lo?"
+          },
+          {
+            "ref": "João 18:36",
+            "texto": "O meu reino não é deste mundo. Se o meu reino fosse deste mundo, os meus ministros se empenhariam para que eu não fosse entregue..."
+          }
+        ]
+      },
+      {
+        "id": "sis_20",
+        "pergunta": "O que é o Estado Intermediário?",
+        "resposta": "É a condição das almas entre a morte física e a ressurreição final. Rejeitamos o 'sono da alma' (psicopaniquia) e o Purgatório. Imediatamente após a morte, as almas dos crentes entram na glória consciente com Cristo (Paraíso), e as almas dos ímpios entram em tormento consciente (Hades), aguardando o Juízo Final para a reunificação com seus corpos.",
+        "versiculos": [
+          {
+            "ref": "Filipenses 1:23",
+            "texto": "...tendo o desejo de partir e estar com Cristo, o que é incomparavelmente melhor."
+          },
+          {
+            "ref": "2 Coríntios 5:8",
+            "texto": "...preferindo deixar o corpo e habitar com o Senhor."
+          }
+        ]
+      },
+      {
+        "id": "sis_21",
+        "pergunta": "Haverá um Arrebatamento Secreto?",
+        "resposta": "Não. A doutrina do Arrebatamento Secreto pré-tribulacional é uma invenção recente (séc. XIX). A Bíblia ensina uma vinda única, visível e gloriosa de Cristo no fim dos tempos. O 'encontro nos ares' (1 Ts 4) descreve a Igreja saindo para receber o Rei que vem julgar a terra e estabelecer os Novos Céus, não para fugir dela secretamente.",
+        "versiculos": [
+          {
+            "ref": "Apocalipse 1:7",
+            "texto": "Eis que ele vem com as nuvens, e todo olho o verá, até mesmo os que o traspassaram..."
+          },
+          {
+            "ref": "2 Tessalonicenses 2:1-3",
+            "texto": "...a vinda de nosso Senhor Jesus Cristo e a nossa reunião com ele... não acontecerá sem que primeiro venha a apostasia..."
+          }
+        ]
+      },
+      {
+        "id": "sis_22",
+        "pergunta": "O Inferno é aniquilação ou tormento eterno?",
+        "resposta": "É tormento consciente e eterno. O Aniquilacionismo (a alma deixa de existir) contraria as palavras de Jesus sobre o 'fogo que não se apaga' e o 'verme que não morre'. A punição é eterna porque a ofensa é contra um Deus eterno e infinito. A justiça de Deus sustenta a existência dos condenados para que recebam a retribuição de seus atos.",
+        "versiculos": [
+          {
+            "ref": "Mateus 25:46",
+            "texto": "E estes irão para o castigo eterno, porém os justos, para a vida eterna."
+          },
+          {
+            "ref": "Apocalipse 14:11",
+            "texto": "A fumaça do seu tormento sobe pelos séculos dos séculos, e não têm descanso algum, nem de dia nem de noite..."
+          }
+        ]
+      },
+      {
+        "id": "sis_23",
+        "pergunta": "Como será a Ressurreição dos Corpos?",
+        "resposta": "Será uma ressurreição física e literal. Não seremos fantasmas. Teremos corpos glorificados, semelhantes ao de Cristo ressurreto: imperecíveis, poderosos e espirituais (movidos plenamente pelo Espírito, não pela carne), mas ainda materiais. A identidade pessoal será preservada; seremos nós mesmos, mas sem pecado e sem a fraqueza da mortalidade.",
+        "versiculos": [
+          {
+            "ref": "1 Coríntios 15:52-53",
+            "texto": "...os mortos ressuscitarão incorruptíveis, e nós seremos transformados. Porque é necessário que este corpo corruptível se revista da incorruptibilidade..."
+          },
+          {
+            "ref": "Jó 19:26",
+            "texto": "E, depois de consumida a minha pele, ainda em minha carne verei a Deus."
+          }
+        ]
+      },
+      {
+        "id": "sis_24",
+        "pergunta": "Quem é o Anticristo?",
+        "resposta": "Historicamente, a teologia reformada identificou o Papado (o sistema, não necessariamente um papa individual) como o Anticristo, pois 'senta-se no santuário de Deus' (a Igreja) usurpando a autoridade de Cristo. Biblicamente, o Anticristo é tanto um espírito de erro já presente no mundo quanto uma manifestação escatológica de oposição final a Cristo, caracterizada pela heresia e perseguição.",
+        "versiculos": [
+          {
+            "ref": "2 Tessalonicenses 2:4",
+            "texto": "...o qual se opõe e se levanta contra tudo o que se chama Deus ou é objeto de culto, a ponto de assentar-se no santuário de Deus, ostentando-se como se fosse o próprio Deus."
+          },
+          {
+            "ref": "1 João 2:18",
+            "texto": "Filhinhos, já é a última hora; e, como vocês ouviram que o anticristo vem, também agora muitos anticristos têm surgido."
+          }
+        ]
+      },
+      {
+        "id": "sis_25",
+        "pergunta": "O que são os Novos Céus e Nova Terra?",
+        "resposta": "A eternidade não será vivida em uma nuvem etérea, mas em um universo físico renovado e purificado pelo fogo. Deus não joga fora a criação; Ele a restaura (Romanos 8). O céu descerá à terra (Apocalipse 21). Viveremos, trabalharemos e adoraremos a Deus em uma terra tangível, livre da maldição do pecado, onde a justiça habita.",
+        "versiculos": [
+          {
+            "ref": "2 Pedro 3:13",
+            "texto": "Nós, porém, segundo a sua promessa, esperamos novos céus e nova terra, nos quais habita a justiça."
+          },
+          {
+            "ref": "Romanos 8:21",
+            "texto": "...na esperança de que a própria criação será redimida do cativeiro da corrupção, para a liberdade da glória dos filhos de Deus."
+          }
+        ]
+      },
+      {
+        "id": "sis_26",
+        "pergunta": "O cristão será julgado pelas obras?",
+        "resposta": "Sim, mas não para salvação (que é pela fé somente), e sim para galardão (recompensa) e evidência de fé. As obras provam a realidade da nossa união com Cristo. Os crentes comparecerão ao Tribunal de Cristo não para condenação penal (já paga na cruz), mas para avaliação de sua mordomia. As obras boas são fruto da graça, e Deus as coroa por pura bondade.",
+        "versiculos": [
+          {
+            "ref": "2 Coríntios 5:10",
+            "texto": "Porque importa que todos nós compareçamos perante o tribunal de Cristo, para que cada um receba segundo o bem ou o mal que tiver feito por meio do corpo."
+          },
+          {
+            "ref": "Apocalipse 22:12",
+            "texto": "Eis que venho sem demora, e comigo está o galardão que tenho para retribuir a cada um segundo as suas obras."
+          }
+        ]
+      },
+      {
+        "id": "sis_27",
+        "pergunta": "O que significa 'Orar em Espírito'?",
+        "resposta": "Não significa orar em línguas estranhas ou em êxtase irracional. Orar no Espírito (Judas 20, Efésios 6:18) significa orar sob a influência, a ajuda e a direção do Espírito Santo, em conformidade com a Palavra de Deus e com fé sincera. O Espírito nos assiste em nossa fraqueza, intercedendo por nós e moldando nossos desejos aos de Deus.",
+        "versiculos": [
+          {
+            "ref": "Romanos 8:26",
+            "texto": "Também o Espírito, semelhantemente, nos assiste em nossa fraqueza; porque não sabemos orar como convém..."
+          }
+        ]
+      },
+      {
+        "id": "sis_28",
+        "pergunta": "Qual a diferença entre Graça Irresistível e Coação?",
+        "resposta": "Coação é forçar alguém a fazer o que não quer. Graça Irresistível (ou Chamado Eficaz) é Deus mudar o coração de tal forma que a pessoa *quer* vir a Ele. Deus não arrasta o pecador chutando e gritando para o céu; Ele o atrai amorosamente, abrindo seus olhos para ver a beleza de Cristo, de modo que vir a Jesus se torna a escolha mais livre e desejável de sua vida.",
+        "versiculos": [
+          {
+            "ref": "Salmo 110:3",
+            "texto": "O teu povo se apresentará voluntariamente no dia do teu poder..."
+          },
+          {
+            "ref": "Jeremias 31:3",
+            "texto": "Com amor eterno eu a amei; por isso, com bondade a atraí."
+          }
+        ]
+      },
+      {
+        "id": "sis_29",
+        "pergunta": "A Lei de Deus foi abolida para o cristão?",
+        "resposta": "Como meio de justificação, sim (não somos salvos por guardar a Lei). Como regra de vida, não. A Lei Moral (Decálogo) revela o caráter de Deus e nos guia na santificação. O 'Antinomianismo' (viver sem lei) é uma heresia. Somos livres da *maldição* da Lei, mas servos da *justiça* da Lei, capacitados pelo Espírito a amá-la e obedecê-la.",
+        "versiculos": [
+          {
+            "ref": "Romanos 3:31",
+            "texto": "Anulamos, pois, a lei por meio da fé? De modo nenhum! Pelo contrário, confirmamos a lei."
+          },
+          {
+            "ref": "1 João 5:3",
+            "texto": "Porque este é o amor de Deus: que guardemos os seus mandamentos; e os seus mandamentos não são penosos."
+          }
+        ]
+      },
+      {
+        "id": "sis_30",
+        "pergunta": "O que é a Blasfêmia contra o Espírito Santo?",
+        "resposta": "É o pecado imperdoável. Não é um ato impulsivo ou um pecado específico como suicídio ou adultério. É a rejeição maliciosa, consciente e contínua da verdade de Deus revelada pelo Espírito, atribuindo a obra de Deus a Satanás (como os fariseus fizeram). Quem teme ter cometido esse pecado prova que não o cometeu, pois o blasfemo real não tem remorso nem desejo de Deus.",
+        "versiculos": [
+          {
+            "ref": "Mateus 12:31-32",
+            "texto": "...mas a blasfêmia contra o Espírito não será perdoada... nem neste mundo nem no vindouro."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cat_exegese",
+    "titulo": "O Desafio Exegético (Harmonização e Passagens Difíceis)",
+    "descricao": "Resolução de supostas contradições e passagens obscuras, de Gênesis ao Apocalipse, demonstrando a coerência interna da Bíblia.",
+    "perguntas": [
+      {
+        "id": "exe_01",
+        "pergunta": "Gênesis 1 e 2 se contradizem na ordem da criação?",
+        "resposta": "Não. Gênesis 1 é um relato cronológico e cósmico da criação (do caos à ordem). Gênesis 2 não é uma continuação cronológica, mas um 'zoom' detalhado e temático no sexto dia, focando na criação do homem e da mulher no Jardim. A suposta contradição sobre as plantas (Gn 2:5) refere-se a plantas cultivadas (do campo) que exigiam o homem para lavrar, não à vegetação silvestre criada no terceiro dia.",
+        "versiculos": [
+          {
+            "ref": "Gênesis 2:4",
+            "texto": "Esta é a gênese dos céus e da terra quando foram criados, quando o Senhor Deus os criou."
+          }
+        ]
+      },
+      {
+        "id": "exe_02",
+        "pergunta": "Quem foi a esposa de Caim?",
+        "resposta": "Caim casou-se com uma de suas irmãs (ou sobrinhas). A Bíblia diz que Adão viveu 930 anos e 'gerou filhos e filhas' (Gn 5:4). No início da humanidade, o casamento consanguíneo era biologicamente seguro (o código genético era puro, sem acúmulo de mutações deletérias) e moralmente permitido por necessidade, sendo proibido por Deus apenas na época de Moisés (Levítico 18), quando a genética humana já havia se degradado.",
+        "versiculos": [
+          {
+            "ref": "Gênesis 5:4",
+            "texto": "Depois que gerou Sete, Adão viveu oitocentos anos; e teve filhos e filhas."
+          }
+        ]
+      },
+      {
+        "id": "exe_03",
+        "pergunta": "Quem eram os 'Filhos de Deus' em Gênesis 6?",
+        "resposta": "A interpretação reformada clássica (Calvino, Berkhof) rejeita a ideia de anjos tendo relações sexuais com humanos (anjos são assexuados, Mt 22:30). Os 'filhos de Deus' eram a linhagem piedosa de Sete, que se misturou em casamento com as 'filhas dos homens' (a linhagem ímpia de Caim), resultando na corrupção moral total que levou ao Dilúvio.",
+        "versiculos": [
+          {
+            "ref": "Mateus 22:30",
+            "texto": "Porque, na ressurreição, nem casam, nem se dão em casamento; são, porém, como os anjos no céu."
+          }
+        ]
+      },
+      {
+        "id": "exe_04",
+        "pergunta": "Deus endureceu o coração de Faraó ou ele mesmo se endureceu?",
+        "resposta": "Ambos são verdadeiros (Harmonização Teológica). O texto diz que Faraó endureceu seu coração (agência humana, culpa moral) e que Deus endureceu o coração de Faraó (soberania divina, punição judicial). Deus não injetou maldade em um Faraó inocente; Ele simplesmente retirou Sua graça refreadora, entregando um pecador obstinado à sua própria maldade natural para cumprir Seus propósitos de julgamento.",
+        "versiculos": [
+          {
+            "ref": "Êxodo 8:32",
+            "texto": "Mas também desta vez Faraó endureceu o coração e não deixou o povo ir."
+          },
+          {
+            "ref": "Romanos 9:17-18",
+            "texto": "Logo, ele tem misericórdia de quem quer e também endurece a quem quer."
+          }
+        ]
+      },
+      {
+        "id": "exe_05",
+        "pergunta": "A Bíblia aprova a escravidão?",
+        "resposta": "Não. A Bíblia regula uma realidade cultural existente para mitigar seus males, mas planta as sementes para sua abolição (Gálatas 3:28, Filemom). A 'escravidão' hebraica era frequentemente servidão por dívida (contrato de trabalho limitado a 6 anos), radicalmente diferente do tráfico negreiro moderno, que a Bíblia pune com a morte (Êxodo 21:16, 1 Timóteo 1:10 - 'sequestradores/mercadores de escravos').",
+        "versiculos": [
+          {
+            "ref": "Êxodo 21:16",
+            "texto": "Quem raptar alguém e o vender, ou for achado com ele na sua mão, será morto."
+          },
+          {
+            "ref": "1 Coríntios 7:21",
+            "texto": "Você foi chamado sendo escravo? Não se preocupe com isso; mas, se você pode tornar-se livre, aproveite a oportunidade."
+          }
+        ]
+      },
+      {
+        "id": "exe_06",
+        "pergunta": "A Feiticeira de Endor realmente trouxe Samuel dos mortos?",
+        "resposta": "Sim, mas não pelo poder dela. A narrativa (1 Samuel 28) indica que a médium ficou aterrorizada ('gritou em alta voz') ao ver Samuel, o que prova que o resultado não foi fruto de seus truques habituais. Deus, em um ato extraordinário de juízo, permitiu que o espírito de Samuel subisse para pronunciar a condenação final de Saul. Não foi uma sessão espírita bem-sucedida, mas uma intervenção divina soberana para punir a necromancia do rei.",
+        "versiculos": [
+          {
+            "ref": "1 Samuel 28:12",
+            "texto": "Quando a mulher viu Samuel, gritou em alta voz..."
+          },
+          {
+            "ref": "1 Crônicas 10:13",
+            "texto": "Assim morreu Saul por causa da transgressão que cometeu contra o Senhor... e também porque interrogou e consultou uma necromante."
+          }
+        ]
+      },
+      {
+        "id": "exe_07",
+        "pergunta": "Quem incitou Davi ao censo: Deus ou Satanás?",
+        "resposta": "Ambos, em níveis diferentes (Causalidade). 2 Samuel 24:1 diz que a ira do Senhor incitou Davi; 1 Crônicas 21:1 diz que Satanás o incitou. Harmonização: Deus foi a Causa Primária e Soberana (decretando o teste e a punição do orgulho de Israel), usando Satanás como a Causa Secundária e Instrumental (que agiu por malícia própria para tentar Davi). Deus usa até o diabo para cumprir Seus propósitos santos, sem ser o autor do mal.",
+        "versiculos": [
+          {
+            "ref": "2 Samuel 24:1",
+            "texto": "A ira do Senhor se acendeu novamente contra Israel, e ele incitou Davi contra eles, dizendo: — Vá e faça o recenseamento..."
+          },
+          {
+            "ref": "1 Crônicas 21:1",
+            "texto": "Então Satanás se levantou contra Israel e incitou Davi a fazer o recenseamento de Israel."
+          }
+        ]
+      },
+      {
+        "id": "exe_08",
+        "pergunta": "Jefté sacrificou sua filha a Deus?",
+        "resposta": "O texto de Juízes 11 narra um voto precipitado e tolo. Embora alguns intérpretes sugiram que ela foi apenas dedicada ao celibato perpétuo (focando na ênfase sobre sua virgindade), a leitura mais natural e trágica do texto hebraico ('oferecerei em holocausto') sugere que Jefté cumpriu o voto literalmente. Isso não significa que Deus aceitou ou aprovou o sacrifício humano (que a Lei proíbe, Dt 18:10), mas que a narrativa registra a ignorância teológica e a degradação moral da época dos Juízes.",
+        "versiculos": [
+          {
+            "ref": "Juízes 11:30-31",
+            "texto": "Jefté fez um voto ao Senhor... 'quem primeiro sair da porta da minha casa... será do Senhor, e eu o oferecerei em holocausto.'"
+          }
+        ]
+      },
+      {
+        "id": "exe_09",
+        "pergunta": "Como orar os Salmos de Vingança (Imprecatórios)?",
+        "resposta": "Salmos que pedem a destruição dos inimigos (ex: Sl 137, 109) não são explosões de vingança pessoal pecaminosa, mas apelos proféticos à Justiça Divina. O salmista, inspirado pelo Espírito, alinha-se com o juízo de Deus contra o mal obstinado que ataca o Reino de Deus. Para o cristão hoje, oramos não contra pessoas específicas, mas contra os principados espirituais e pedimos que a justiça de Deus prevaleça, entregando a retribuição a Ele.",
+        "versiculos": [
+          {
+            "ref": "Salmo 139:21-22",
+            "texto": "Não é fato, Senhor, que odeio os que te odeiam?... Odeio-os com ódio completo; para mim, são inimigos."
+          },
+          {
+            "ref": "Romanos 12:19",
+            "texto": "Não se vinguem, amados... porque está escrito: 'A mim pertence a vingança; eu é que retribuirei, diz o Senhor'."
+          }
+        ]
+      },
+      {
+        "id": "exe_10",
+        "pergunta": "Por que as genealogias de Jesus (Mateus e Lucas) são diferentes?",
+        "resposta": "Mateus (1:1-17) traça a linhagem legal e real através de José (descendente de Salomão), estabelecendo o direito de Jesus ao trono de Davi. Lucas (3:23-38) traça a linhagem biológica/natural, muito provavelmente através de Maria (sendo Eli o sogro de José), descendo de Natã, outro filho de Davi. Assim, Jesus é filho de Davi legalmente (por adoção de José) e biologicamente (por Maria), cumprindo todas as profecias messiânicas.",
+        "versiculos": [
+          {
+            "ref": "Romanos 1:3",
+            "texto": "...com respeito a seu Filho, o qual, segundo a carne, veio da descendência de Davi."
+          }
+        ]
+      },
+      {
+        "id": "exe_11",
+        "pergunta": "Isaías 7:14 fala de uma virgem ou jovem mulher?",
+        "resposta": "A palavra hebraica *almah* significa uma jovem mulher em idade de casar, o que na cultura hebraica implicava virgindade. A Septuaginta (tradução grega feita por judeus antes de Cristo) traduziu especificamente como *parthenos* (virgem estrita). O cumprimento foi duplo: uma referência tipológica imediata nos dias de Acaz (nascimento de um filho real ou profético), mas o cumprimento pleno e final (*sensus plenior*) ocorreu somente no nascimento sobrenatural de Jesus, conforme Mateus 1:23.",
+        "versiculos": [
+          {
+            "ref": "Mateus 1:23",
+            "texto": "Eis que a virgem conceberá e dará à luz um filho, e ele será chamado pelo nome de Emanuel."
+          }
+        ]
+      },
+      {
+        "id": "exe_12",
+        "pergunta": "Havia um ou dois endemoninhados em Gadara?",
+        "resposta": "Mateus (8:28) menciona dois; Marcos (5:2) e Lucas (8:27) mencionam um. Regra de Harmonização: Onde há dois, há um. Marcos e Lucas focam no endemoninhado mais notável e falante (o 'Legião'), enquanto Mateus, que era testemunha ocular, recorda a presença do segundo. Mencionar apenas um protagonista não nega a existência do companheiro; é uma escolha narrativa seletiva, não uma contradição factual.",
+        "versiculos": [
+          {
+            "ref": "Mateus 8:28",
+            "texto": "Quando Jesus chegou à outra margem... dois endemoninhados foram ao seu encontro..."
+          }
+        ]
+      },
+      {
+        "id": "exe_13",
+        "pergunta": "Como Judas morreu: Enforcado ou precipitado?",
+        "resposta": "Ambos. Mateus 27:5 diz que ele se enforcou. Atos 1:18 diz que ele 'caiu de cabeça, rompeu-se pelo meio e todas as suas entranhas se derramaram'. Harmonização: Judas enforcou-se (provavelmente à beira de um precipício no Vale de Hinom). O galho ou a corda se rompeu (talvez após a morte e o inchaço do corpo), e o corpo caiu nas pedras abaixo, estourando-se. Os relatos se complementam na descrição da tragédia física.",
+        "versiculos": [
+          {
+            "ref": "Mateus 27:5",
+            "texto": "Então Judas... retirou-se e foi enforcar-se."
+          },
+          {
+            "ref": "Atos 1:18",
+            "texto": "(Ora, este homem adquiriu um campo... e, precipitando-se, rompeu-se pelo meio...)"
+          }
+        ]
+      },
+      {
+        "id": "exe_14",
+        "pergunta": "O galo cantou uma ou duas vezes na negação de Pedro?",
+        "resposta": "Marcos (14:30), sendo o evangelho baseado nas memórias de Pedro, é mais detalhado: 'antes que o galo cante *duas vezes*, você me negará três vezes'. Os outros evangelistas resumem dizendo apenas 'antes que o galo cante'. Não há contradição; se o galo cantou duas vezes, ele certamente cantou uma. Os outros autores apenas registraram o fato principal (o canto) sem especificar a contagem exata dos inícios da madrugada.",
+        "versiculos": [
+          {
+            "ref": "Marcos 14:72",
+            "texto": "E logo o galo cantou pela segunda vez. Então Pedro se lembrou da palavra que Jesus lhe tinha dito..."
+          }
+        ]
+      },
+      {
+        "id": "exe_15",
+        "pergunta": "Os companheiros de Paulo ouviram a voz na estrada de Damasco?",
+        "resposta": "Atos 9:7 diz que eles 'ouviram a voz', mas não viram ninguém. Atos 22:9 diz que eles 'não ouviram a voz'. No grego, há uma distinção gramatical: em Atos 9, 'voz' está no genitivo (ouvir o som, o ruído); em Atos 22, está no acusativo (ouvir com entendimento/compreensão). Harmonização: Eles ouviram o barulho estrondoso da voz (o som físico), mas não distinguiram as palavras articuladas que só Paulo compreendeu. Eles ouviram o som, mas não entenderam a mensagem.",
+        "versiculos": [
+          {
+            "ref": "Atos 22:9",
+            "texto": "Os que estavam comigo viram a luz, mas não entenderam a voz daquele que falava comigo."
+          }
+        ]
+      },
+      {
+        "id": "exe_16",
+        "pergunta": "Jesus foi crucificado na hora terceira ou na hora sexta?",
+        "resposta": "Marcos 15:25 diz 'hora terceira' (9h da manhã). João 19:14 diz que o julgamento estava terminando 'cerca da hora sexta' (meio-dia). Harmonização possível: João, escrevendo no final do século I em Éfeso (província romana), pode estar usando a contagem de tempo romana (contando a partir da meia-noite, logo hora sexta = 6h da manhã), enquanto Marcos usa o tempo judaico (contando do nascer do sol). Outra possibilidade é o uso de quartos de dia imprecisos ('meio da manhã' vs 'perto do meio dia').",
+        "versiculos": [
+          {
+            "ref": "Marcos 15:25",
+            "texto": "Eram nove horas da manhã quando o crucificaram."
+          }
+        ]
+      },
+      {
+        "id": "exe_17",
+        "pergunta": "Quem carregou a cruz: Jesus ou Simão Cireneu?",
+        "resposta": "João 19:17 diz que Jesus saiu 'carregando a sua própria cruz'. Os sinóticos (Mt, Mc, Lc) dizem que constrangeram Simão a carregá-la. Harmonização: Jesus começou carregando a cruz (o patíbulo) desde o pretório, como era o costume. Contudo, debilitado pela flagelação severa, Ele não suportou o peso no caminho. Os soldados então forçaram Simão a assumir a carga pelo restante do trajeto até o Gólgota.",
+        "versiculos": [
+          {
+            "ref": "Lucas 23:26",
+            "texto": "Quando o levavam, agarraram um certo Simão... e puseram a cruz sobre ele, para que a levasse atrás de Jesus."
+          }
+        ]
+      },
+      {
+        "id": "exe_18",
+        "pergunta": "Tiago e Paulo se contradizem sobre Fé e Obras?",
+        "resposta": "Não. Eles usam a palavra 'Justificação' em sentidos diferentes. Paulo combate o legalismo (tentar ser salvo por mérito) e ensina a Justificação *Legal* (diante de Deus), que é somente pela fé. Tiago combate o antinomianismo (fé morta/intelectual) e ensina a Justificação *Demonstrativa* (diante dos homens), onde a fé é provada pelas obras. Paulo diz que a fé salva; Tiago diz que a fé que salva não está sozinha. A árvore é salva pela vida (fé), mas prova que está viva pelos frutos (obras).",
+        "versiculos": [
+          {
+            "ref": "Efésios 2:8-10",
+            "texto": "Porque pela graça vocês são salvos, mediante a fé... não de obras... Pois fomos criados em Cristo Jesus para boas obras..."
+          },
+          {
+            "ref": "Tiago 2:26",
+            "texto": "Porque, assim como o corpo sem espírito é morto, assim também a fé sem obras é morta."
+          }
+        ]
+      },
+      {
+        "id": "exe_19",
+        "pergunta": "O que é o 'Batismo pelos Mortos' (1 Coríntios 15:29)?",
+        "resposta": "Esta é uma *Crux Interpretum* (passagem difícil). Certamente não legitima o batismo vicário mórmon, pois contradiz a salvação pessoal pela fé. Interpretações reformadas prováveis: 1) Batismo 'por causa' dos mortos: novos convertidos se batizavam para preencher as fileiras dos mártires que morreram, inspirados pelo testemunho deles; 2) Lavagem ritual dos corpos antes do sepultamento (prática judaica) como sinal de esperança na ressurreição. Paulo usa isso *ad hominem*: 'Se não há ressurreição, por que vocês se preocupam com rituais fúnebres ou sucessão de mártires?'",
+        "versiculos": [
+          {
+            "ref": "1 Coríntios 15:29",
+            "texto": "Doutra maneira, que farão os que se batizam por causa dos mortos? Se, absolutamente, os mortos não ressuscitam, por que se batizam por causa deles?"
+          }
+        ]
+      },
+      {
+        "id": "exe_20",
+        "pergunta": "A mulher será salva dando à luz (1 Timóteo 2:15)?",
+        "resposta": "Isso não ensina salvação biológica (o que condenaria mulheres estéreis ou solteiras). O texto refere-se a: 1) O cumprimento do Protoevangelho (Gn 3:15) — a mulher (Eva) trouxe a transgressão, mas a 'Mulher' (Maria/o gênero feminino) trouxe o Salvador através do parto; 2) 'Salvação' no sentido de santificação/preservação: a mulher cristã demonstra sua salvação perseverando na fé e na piedade, cumprindo sua vocação dada por Deus (a maternidade sendo uma sinédoque para o papel doméstico, contra as falsas mestras de Éfeso que desprezavam o casamento).",
+        "versiculos": [
+          {
+            "ref": "1 Timóteo 2:15",
+            "texto": "Todavia, será preservada através de sua missão de mãe, se ela permanecer em fé, e amor, e santificação, com bom senso."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "exe_21",
+    "pergunta": "O crente não pode pecar (1 João 3:9) ou peca (1 João 1:8)?",
+    "resposta": "João parece se contradizer, mas não o faz. Em 1:8, ele diz que 'se dissermos que não temos pecado, a verdade não está em nós' (natureza pecaminosa remanescente). Em 3:9, ele diz que 'aquele que é nascido de Deus não vive na prática do pecado'. A harmonização está no tempo verbal grego: o crente não *vive pecando* habitualmente (presente contínuo) como estilo de vida impenitente, mas ele comete atos de pecado (aoristo) contra os quais luta. O crente peca, mas não é mais escravo do pecado.",
+    "versiculos": [
+      {
+        "ref": "1 João 3:9",
+        "texto": "Todo aquele que é nascido de Deus não vive na prática de pecado... e não pode viver pecando, porque nasceu de Deus."
+      },
+      {
+        "ref": "1 João 1:8",
+        "texto": "Se dissermos que não temos pecado nenhum, a nós mesmos nos enganamos, e a verdade não está em nós."
+      }
+    ]
+  },
+  {
+    "id": "exe_22",
+    "pergunta": "Hebreus 6:4-6 ensina que podemos perder a salvação?",
+    "resposta": "Esta passagem terrível descreve apóstatas que foram 'iluminados' e 'provaram o dom celestial', mas caíram. A interpretação reformada sustenta que essas experiências referem-se às operações comuns do Espírito (convicção, milagres, alegria temporária) que não são a regeneração salvífica. Eles participaram da igreja visível e das bênçãos do pacto, mas nunca tiveram o 'cororação de carne'. O texto adverte que, para quem rejeita a Cristo plenamente após conhecer a verdade, não há outro sacrifício disponível.",
+    "versiculos": [
+      {
+        "ref": "Hebreus 6:9",
+        "texto": "Quanto a vocês, porém, ó amados, estamos persuadidos das coisas que são melhores e pertencentes à salvação..."
+      },
+      {
+        "ref": "1 João 2:19",
+        "texto": "Eles saíram do nosso meio, mas não eram dos nossos; porque, se tivessem sido dos nossos, teriam permanecido conosco..."
+      }
+    ]
+  },
+  {
+    "id": "exe_23",
+    "pergunta": "Jesus pregou aos espíritos em prisão (1 Pedro 3:19)?",
+    "resposta": "Isso não significa que Jesus desceu ao inferno para dar uma segunda chance aos mortos. A interpretação de Agostinho e Bavinck é que Cristo, *pelo Espírito*, pregou através de Noé aos seus contemporâneos (a geração do dilúvio) enquanto a arca era construída. Aquelas pessoas, que rejeitaram a pregação de Noé (o 'pregoeiro da justiça'), estão *agora* em prisão (no inferno) aguardando o juízo. A pregação ocorreu no passado (dias de Noé), mas a prisão é o estado atual deles.",
+    "versiculos": [
+      {
+        "ref": "1 Pedro 3:20",
+        "texto": "...os quais, noutro tempo, foram desobedientes, quando a longanimidade de Deus aguardava nos dias de Noé..."
+      },
+      {
+        "ref": "2 Pedro 2:5",
+        "texto": "...mas preservou a Noé, pregador da justiça, e mais sete pessoas..."
+      }
+    ]
+  },
+  {
+    "id": "exe_24",
+    "pergunta": "Deus quer que todos sejam salvos (1 Timóteo 2:4)?",
+    "resposta": "Se Deus quisesse (Decretivamente) salvar cada indivíduo absolutamente, todos seriam salvos, pois ninguém resiste ao Seu poder. O texto deve ser entendido no contexto: Paulo exorta a orar por 'reis e autoridades' (v.2). Deus quer que 'todos os tipos de homens' (reis, escravos, judeus, gentios) sejam salvos, não apenas os judeus ou os pobres. A vontade de Deus aqui refere-se às classes de pessoas, rompendo a exclusividade nacional judaica, e não a uma vontade frustrada de salvar cada indivíduo.",
+    "versiculos": [
+      {
+        "ref": "Apocalipse 5:9",
+        "texto": "...e com o teu sangue compraste para Deus os que procedem de toda tribo, língua, povo e nação."
+      }
+    ]
+  },
+  {
+    "id": "exe_25",
+    "pergunta": "Jesus errou ao dizer que 'não passará esta geração' (Mateus 24:34)?",
+    "resposta": "Não. 'Esta geração' pode referir-se a: 1) A geração contemporânea de Jesus, que veria o juízo sobre Jerusalém em 70 d.C. (uma prefiguração do fim), cumprindo a parte profética da destruição do Templo; ou 2) A 'raça' (genea) judaica, que não seria extinta apesar das perseguições até o fim dos tempos. A visão reformada tende a ver o cumprimento duplo: o juízo sobre Israel no séc. I como tipo do Juízo Final.",
+    "versiculos": [
+      {
+        "ref": "Mateus 24:2",
+        "texto": "Porém ele lhes disse: ...Não ficará aqui pedra sobre pedra que não seja derrubada."
+      }
+    ]
+  },
+  {
+    "id": "exe_26",
+    "pergunta": "O Batismo salva (Atos 2:38; 1 Pedro 3:21)?",
+    "resposta": "Pedro diz que o batismo salva, mas imediatamente qualifica: 'não a remoção da sujeira do corpo, mas a indagação de uma boa consciência' (1 Pe 3:21). O batismo salva *sacramentalmente* (como sinal e selo), não *instrumentalmente* (como causa). Assim como a aliança salvou Noé através da água, o batismo (união com Cristo) nos salva. Em Atos 2:38, 'para remissão' pode significar 'com base na remissão' ou apontando para a remissão que a fé (expressa no batismo) recebe.",
+    "versiculos": [
+      {
+        "ref": "1 Pedro 3:21",
+        "texto": "...o batismo, que agora também salva vocês, não sendo a remoção da sujeira do corpo, mas a indagação de uma boa consciência para com Deus..."
+      }
+    ]
+  },
+  {
+    "id": "exe_27",
+    "pergunta": "A mulher deve ficar em silêncio absoluto na igreja (1 Coríntios 14:34)?",
+    "resposta": "Se fosse silêncio absoluto, Paulo contradiria o cap. 11, onde ele orienta como a mulher deve orar e profetizar. O silêncio do cap. 14 é contextual: refere-se ao julgamento das profecias ('julgues os outros' - v.29). As mulheres não deviam participar do autoritativo julgamento público da doutrina no culto, função dos presbíteros, para não subverter a ordem da liderança masculina. Não é proibição de cantar ou orar.",
+    "versiculos": [
+      {
+        "ref": "1 Coríntios 11:5",
+        "texto": "Mas toda mulher que ora ou profetiza com a cabeça descoberta desonra a sua própria cabeça..."
+      }
+    ]
+  },
+  {
+    "id": "exe_28",
+    "pergunta": "Os padres/pastores têm poder de perdoar pecados (João 20:23)?",
+    "resposta": "Jesus disse: 'Se perdoarem os pecados de alguém, serão perdoados'. Isso não é poder judicial (que pertence só a Deus), mas *declarativo* e *ministerial*. A Igreja, através da pregação do Evangelho, declara com autoridade o perdão de Deus a quem se arrepende e a retenção do perdão a quem não crê. As chaves do reino abrem a porta através da pregação da Palavra, não através da absolvição sacerdotal intrínseca.",
+    "versiculos": [
+      {
+        "ref": "Marcos 2:7",
+        "texto": "Por que este homem fala assim? Ele está blasfemando! Quem pode perdoar pecados, a não ser um, que é Deus?"
+      }
+    ]
+  },
+  {
+    "id": "exe_29",
+    "pergunta": "A unção com óleo (Tiago 5:14) é um sacramento de cura?",
+    "resposta": "Não. No contexto do primeiro século, o óleo (azeite) era o principal medicamento para feridas e doenças. Tiago está ordenando o uso de *meios medicinais* (óleo) em conjunto com a *oração da fé* pelos presbíteros. Não é um rito mágico nem a 'Extrema Unção' para a morte, mas uma instrução para tratar o doente integralmente (corpo e alma), confiando a cura a Deus.",
+    "versiculos": [
+      {
+        "ref": "Lucas 10:34",
+        "texto": "Aproximando-se, fez curativos nos ferimentos dele, aplicando-lhes óleo e vinho..."
+      }
+    ]
+  },
+  {
+    "id": "exe_30",
+    "pergunta": "Quem são os 144 mil (Apocalipse 7 e 14)?",
+    "resposta": "Não é um número literal de judeus étnicos no fim dos tempos, nem a classe de 'ungidos' das Testemunhas de Jeová. É um número simbólico da totalidade da Igreja de Deus: 12 (tribos do AT) x 12 (apóstolos do NT) x 1000 (multidão vasta/completude). Representa todo o povo de Deus, redimido da terra, que foi selado e protegido espiritualmente contra o juízo divino, a 'grande multidão' que ninguém podia contar.",
+    "versiculos": [
+      {
+        "ref": "Apocalipse 7:9",
+        "texto": "Depois destas coisas, vi, e eis grande multidão que ninguém podia contar, de todas as nações, tribos, povos e línguas..."
+      }
+    ]
+  },
+  {
+    "id": "exe_31",
+    "pergunta": "O que significa o número 666 (Apocalipse 13)?",
+    "resposta": "O número da Besta. Se 7 é o número da perfeição divina, 6 é o número do homem (criado no sexto dia) que tenta ser Deus mas falha. 666 é a trindade profana, a imperfeição elevada ao máximo. Historicamente, preteristas veem uma gematria (código numérico) para 'Neron Kaisar' (Nero César). Idealistamente, representa o sistema humano anti-cristão (político, religioso e econômico) em sua máxima expressão de rebelião e idolatria.",
+    "versiculos": [
+      {
+        "ref": "Apocalipse 13:18",
+        "texto": "Aqui está a sabedoria... calcule o número da besta, pois é número de ser humano. E o seu número é seiscentos e sessenta e seis."
+      }
+    ]
+  },
+  {
+    "id": "exe_32",
+    "pergunta": "Paulo e Pedro divergiram sobre a Lei (Gálatas 2)?",
+    "resposta": "Sim, houve um conflito, mas não de doutrina essencial, e sim de *comportamento* (hipocrisia). Pedro sabia que a lei cerimonial havia acabado (Atos 10), mas por medo dos judaizantes, afastou-se dos gentios na mesa. Paulo o repreendeu publicamente não por ensinar heresia, mas por não andar de acordo com a verdade do Evangelho que ambos criam. Pedro aceitou a correção (2 Pedro 3:15 chama Paulo de 'amado irmão').",
+    "versiculos": [
+      {
+        "ref": "Gálatas 2:14",
+        "texto": "Mas, quando vi que não procediam corretamente segundo a verdade do evangelho, disse a Cefas na presença de todos..."
+      }
+    ]
+  },
+  {
+    "id": "exe_33",
+    "pergunta": "Deus se arrepende (Gênesis 6:6)?",
+    "resposta": "Deus é imutável (não muda) em Seu ser e decreto. Quando a Bíblia diz que Ele se arrependeu, usa uma linguagem *antropopática* (atribuindo emoções humanas a Deus) para descrever a mudança na Sua *relação* com o homem ou na administração externa. Para o observador humano, parece que Deus mudou de ideia, mas Ele estava apenas executando uma mudança de juízo já decretada desde a eternidade diante da mudança de comportamento humano.",
+    "versiculos": [
+      {
+        "ref": "Números 23:19",
+        "texto": "Deus não é homem, para que minta; nem filho de homem, para que se arrependa."
+      }
+    ]
+  },
+  {
+    "id": "exe_34",
+    "pergunta": "Melquisedeque era Jesus (Hebreus 7)?",
+    "resposta": "Alguns creem que foi uma Cristofania (aparição pré-encarnada). A visão reformada comum, porém, é que ele foi um rei-sacerdote histórico (tipo de Cristo), mas que o silêncio bíblico sobre sua genealogia ('sem pai, sem mãe' no registro) foi intencional pelo Espírito para tipificar a eternidade de Cristo. Ele era 'semelhante' ao Filho de Deus, não o próprio Filho. Ele prefigura um sacerdócio superior ao levítico.",
+    "versiculos": [
+      {
+        "ref": "Hebreus 7:3",
+        "texto": "...não tendo princípio de dias nem fim de vida, mas, feito semelhante ao Filho de Deus, permanece sacerdote para sempre."
+      }
+    ]
+  },
+  {
+    "id": "exe_35",
+    "pergunta": "A Bíblia contém contradições nos relatos da Ressurreição?",
+    "resposta": "Não. Os relatos são complementares, não contraditórios. As variações (quem chegou primeiro, quantos anjos) são marcas de testemunho ocular autêntico; se fossem idênticos, sugeririam conluio. Harmonização básica: As mulheres vão cedo; encontram a pedra removida; Maria Madalena corre para avisar Pedro; as outras ficam e veem anjos; Pedro e João correm ao túmulo; Maria volta chorando e vê Jesus primeiro; depois Jesus aparece às outras mulheres. A sequência lógica resolve as aparentes discrepâncias.",
+    "versiculos": [
+      {
+        "ref": "João 20:1-2",
+        "texto": "No primeiro dia da semana... Maria Madalena foi ao sepulcro... Então correu e foi dizer a Simão Pedro..."
+      }
+    ]
+  },
+  {
+    "id": "exe_36",
+    "pergunta": "Deus tenta o homem ao pecado (Tiago 1:13 vs Gênesis 22:1)?",
+    "resposta": "Tiago diz que Deus 'a ninguém tenta' (no sentido de induzir ao mal, incitar o pecado interno). Gênesis diz que Deus 'provou' (tentou) Abraão. A palavra hebraica *nissah* e a grega *peirasmos* podem significar tanto 'teste' quanto 'tentação maliciosa', dependendo do contexto. Harmonização: Deus *prova* (testa) a fé dos seus servos para aprová-los e fortalecê-los (fim positivo), mas nunca *tenta* (incita) ninguém a pecar (fim maligno). Satanás tenta para destruir; Deus prova para edificar.",
+    "versiculos": [
+      {
+        "ref": "Tiago 1:13",
+        "texto": "Ninguém, ao ser tentado, diga: 'Sou tentado por Deus'. Porque Deus não pode ser tentado pelo mal e ele mesmo a ninguém tenta."
+      },
+      {
+        "ref": "1 Pedro 1:7",
+        "texto": "...para que, uma vez confirmado o valor da fé de vocês... redunde em louvor, glória e honra na revelação de Jesus Cristo."
+      }
+    ]
+  },
+  {
+    "id": "exe_37",
+    "pergunta": "Ninguém jamais viu a Deus (João 1:18) ou Moisés O viu (Êxodo 33:11)?",
+    "resposta": "João afirma que ninguém jamais viu a Deus *em Sua essência espiritual nua e glória plena* (o que mataria o homem, Êx 33:20). Quando o AT diz que Moisés ou os anciãos viram a Deus, refere-se a: 1) Teofanias (manifestações visíveis temporárias, como a nuvem ou o anjo do Senhor); 2) Uma visão da 'forma' ou 'costas' de Deus (uma manifestação atenuada de Sua glória), e não de Sua face essencial. Em última análise, a única visão plena de Deus acessível ao homem é Jesus Cristo.",
+    "versiculos": [
+      {
+        "ref": "1 Timóteo 6:16",
+        "texto": "...o único que possui imortalidade, que habita em luz inacessível, a quem ninguém jamais viu, nem é capaz de ver."
+      },
+      {
+        "ref": "João 14:9",
+        "texto": "Quem vê a mim vê o Pai. Como você diz: 'Mostre-nos o Pai'?"
+      }
+    ]
+  },
+  {
+    "id": "exe_38",
+    "pergunta": "O divórcio é permitido (Mateus 19) ou proibido (Marcos 10)?",
+    "resposta": "Marcos e Lucas apresentam a regra geral absoluta: 'quem repudiar sua mulher e casar com outra comete adultério'. Mateus, escrevendo para judeus, inclui a 'Cláusula de Exceção': 'exceto em caso de relações sexuais ilícitas' (*porneia*). Harmonização: A regra é a indissolubilidade, mas o adultério (que quebra a aliança) e o abandono irremediável (1 Co 7:15) são as únicas bases bíblicas para o divórcio e novo casamento permitidos na teologia reformada (Confissão de Westminster).",
+    "versiculos": [
+      {
+        "ref": "Mateus 19:9",
+        "texto": "Eu, porém, lhes digo: quem repudiar a sua mulher, não sendo por causa de relações sexuais ilícitas, e casar com outra comete adultério."
+      }
+    ]
+  },
+  {
+    "id": "exe_39",
+    "pergunta": "Devemos odiar pai e mãe para seguir a Jesus (Lucas 14:26)?",
+    "resposta": "Jesus usa um hebraísmo (idioma semítico) de contraste extremo. 'Odiar' aqui não significa animosidade maliciosa (o que violaria o 5º mandamento e o amor ao próximo), mas 'amar menos' em comparação. A lealdade a Cristo deve ser tão suprema que, se a família nos obrigar a escolher entre eles e Jesus, nosso amor à família deve parecer ódio em comparação à nossa devoção absoluta ao Senhor.",
+    "versiculos": [
+      {
+        "ref": "Mateus 10:37",
+        "texto": "Quem ama seu pai ou sua mãe mais do que a mim não é digno de mim..."
+      }
+    ]
+  },
+  {
+    "id": "exe_40",
+    "pergunta": "Por que Paulo não curou Trófimo e Epafrodito se tinha dons?",
+    "resposta": "Isso prova que os dons de cura apostólicos não eram automáticos nem usados para benefício próprio ou conforto irrestrito dos irmãos, mas serviam primariamente como *sinais* para autenticar a revelação (2 Co 12:12). Mesmo na era apostólica, a doença fazia parte da providência de Deus para santificação (como o espinho na carne de Paulo). A teologia da prosperidade/cura garantida falha ao ignorar que Deus é soberano sobre a saúde e a doença.",
+    "versiculos": [
+      {
+        "ref": "2 Timóteo 4:20",
+        "texto": "Erasto ficou em Corinto. Quanto a Trófimo, deixei-o doente em Mileto."
+      },
+      {
+        "ref": "Filipenses 2:27",
+        "texto": "Com efeito, adoeceu [Epafrodito] e esteve à beira da morte; mas Deus se compadeceu dele..."
+      }
+    ]
+  },
+  {
+    "id": "exe_41",
+    "pergunta": "Olho por olho (Êxodo 21) ou Oferecer a outra face (Mateus 5)?",
+    "resposta": "A Lei de Talião (olho por olho) era uma instrução para *juízes* civis, limitando a punição para que fosse proporcional ao crime (evitando vingança desmedida). Jesus, no Sermão do Monte, corrige o abuso dessa lei por indivíduos que a usavam para justificar vingança pessoal. A esfera do Estado é a justiça (espada); a esfera do discípulo individual é a não-retaliação e o amor. Não há contradição, apenas esferas de aplicação diferentes.",
+    "versiculos": [
+      {
+        "ref": "Romanos 13:4",
+        "texto": "Mas, se você fizer o mal, tenha medo, porque não é sem motivo que a autoridade traz a espada; pois é servo de Deus, vingador..."
+      },
+      {
+        "ref": "Mateus 5:39",
+        "texto": "Eu, porém, lhes digo: não resistam ao perverso; mas, a qualquer que lhe ferir a face direita, ofereça-lhe também a outra."
+      }
+    ]
+  },
+  {
+    "id": "exe_42",
+    "pergunta": "O fim do mundo já deveria ter acontecido (Mateus 24:34)?",
+    "resposta": "Céticos alegam que Jesus falhou ao prever o fim em 'Sua geração'. A resposta preterista parcial/reformada é que as profecias de Mateus 24 misturam o julgamento local sobre Jerusalém (ocorrido em 70 d.C., dentro daquela geração) com o Juízo Final. Os sinais de 'estrelas caindo' e 'sol escurecendo' são linguagem apocalíptica comum no AT para a queda de impérios/nações. Jesus acertou: o Antigo Pacto (Templo) caiu naquela geração; o fim da história aguarda o tempo do Pai.",
+    "versiculos": [
+      {
+        "ref": "Marcos 13:32",
+        "texto": "Mas a respeito daquele dia ou da hora ninguém sabe; nem os anjos no céu, nem o Filho, senão o Pai."
+      }
+    ]
+  }
+]
